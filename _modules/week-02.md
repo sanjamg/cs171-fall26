@@ -3,7 +3,7 @@ title: Week 2
 ---
 
 Jan 22
-: **Lecture**{: .label .label-green } Elementary cryptanalysis and frequency analysis. Principles of Modern Cryptography.
+: **Lecture**{: .label .label-green } [Elementary cryptanalysis and frequency analysis. Principles of Modern Cryptography.](/assets/lecture_slides/lec2.pdf)
   : 1.4 and 2.1-2.3
 
 : **Discussion**{: .label .label-purple } [Discussion 1](/assets/discussion/disc1.pdf)
