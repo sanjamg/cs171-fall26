@@ -1,23 +1,16 @@
 ---
-title: Basic Data Structures
+title: Week 2
 ---
 
-Oct 5
-: [Linked Lists & Encapsulation](#)
-  : [3.1](#), [2.2](#), [2.3](#)
+Jan 22
+: **Lecture**{: .label .label-green } Elementary cryptanalysis and frequency analysis. Principles of Modern Cryptography.
+  : 1.4 and 2.1-2.3
 
-Oct 6
-: **Section**{: .label .label-purple }[Linked Lists](#)
-  : [Solution](#)
+: **Discussion**{: .label .label-purple } [Discussion 1](/assets/discussion/disc1.pdf)
 
-Oct 7
-: [Resizing Arrays](#)
-  : [2.4](#), [2.5](#)
+Jan 23
+: **Homework**{: .label .label-yellow } Homework 1
 
-Oct 8
-: **Lab**{: .label .label-purple } [Resizing Arrays](#)
-
-Oct 9
-: [Runtime Analysis](#)
-  : [8.1](#), [8.2](#), [8.3](#), [8.4](#)
-: **HW 2 due**{: .label .label-red }
+Jan 24
+: **Lecture**{: .label .label-green } Modern cryptography: definitions, assumptions, and proofs. Perfect secrecy. The one-time pad. Limitations of perfect secrecy. A computational notion of security. Pseudorandomness and pseudorandom generators. 
+  : 2.1-2.3, 3.1, 3.2.1, and 3.3.1
