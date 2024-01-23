@@ -20,6 +20,7 @@ description: Introduction to Cryptography course website
 baseurl: '/' # the subpath of your site, e.g. /blog
 url: 'https://cs171-site.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+favicon_ico: "/assets/images/alice.ico"
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.5.1
