@@ -78,9 +78,9 @@ You are encouraged to work on homework problems with fellow students; however, y
 
 We are committed to creating a learning environment welcoming of all students. To do so, we intend to support a diversity of perspectives and experiences and respect each others’ identities and backgrounds (including race/ethnicity, nationality, gender identity, socioeconomic class, sexual orientation, language, religion, ability, etc.). To help accomplish this:
 
-*   If you feel like your performance in the class is being impacted by a lack of inclusion, please contact the instructors, your ESS advisor, or the departmental Faculty Equity Advisor (list and information at: [https://diversity.berkeley.edu/faculty-equity-advisors](https://diversity.berkeley.edu/faculty-equity-advisors)). An anonymous feedback form is also available at [https://engineering.berkeley.edu/about/equity-and-inclusion/feedback/](https://engineering.berkeley.edu/about/equity-and-inclusion/feedback/).
+*   If you feel like your performance in the class is being impacted by a lack of inclusion, please contact the instructors, your ESS advisor, or the departmental Faculty Equity Advisor (list and information [here](https://diversity.berkeley.edu/faculty-equity-advisors)). An anonymous feedback form is also available [here](https://engineering.berkeley.edu/about/equity-and-inclusion/feedback/).
 
-*   If you have a name and/or set of pronouns that differ from your legal name, designate a preferred name for use in the classroom at: https://registrar.berkeley.edu/academic-records/your-name-records-rosters.
+*   If you have a name and/or set of pronouns that differ from your legal name, designate a preferred name for use in the classroom [here](https://registrar.berkeley.edu/academic-records/your-name-records-rosters).
 *   If you feel like your performance in the class is being impacted by your experiences outside of class (e.g., family matters, current events), please don’t hesitate to come and talk with the instructor(s). We want to be resources for you.
 
 *   We are all in the process of learning how to respect and include diverse perspectives and identities. Please take care of yourself and those around you as we work through the challenging but important learning process.
@@ -93,7 +93,7 @@ Everyone in this class is expected to adhere to this code: “As a member of the
 
 ## Student Conduct
 
-Ethical conduct is of utmost importance in your education and career. The instructors, the College of Engineering, and U.C. Berkeley are responsible for supporting you by enforcing all students’ compliance with the Code of Student Conduct ([https://sa.berkeley.edu/code-of-conduct](https://sa.berkeley.edu/code-of-conduct)) and the policies listed in the CoE Student Guide (https://engineering.berkeley.edu/students/undergraduate-guide/policies-procedures/). The Center for Student Conduct is set up to support you when you have been affected by actions that may violate these community rules. This includes an organized and transparent process, student participation in the process, mechanisms for appeals, and other mechanisms to protect fairness (https://sa.berkeley.edu/conduct). 
+Ethical conduct is of utmost importance in your education and career. The instructors, the College of Engineering, and U.C. Berkeley are responsible for supporting you by enforcing all students’ compliance with the [Code of Student Conduct](https://sa.berkeley.edu/code-of-conduct) and the policies listed in the [CoE Student Guide](https://engineering.berkeley.edu/students/undergraduate-guide/policies-procedures/). The Center for Student Conduct is set up to support you when you have been affected by actions that may violate these community rules. This includes an organized and transparent process, student participation in the process, mechanisms for appeals, and [other mechanisms to protect fairness](https://sa.berkeley.edu/conduct). 
 
 ## Accommodation Policy
 
