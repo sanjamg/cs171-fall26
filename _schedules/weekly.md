@@ -38,6 +38,11 @@ schedule:
         end: 6:00 PM
         location: Cory 521
   - name: Tuesday
+    events:
+      - name: Discussion
+        start: 5:00 PM
+        end: 6:00 PM
+        location: Wheeler 200
   - name: Wednesday
     events:
       - name: Lecture
@@ -48,15 +53,19 @@ schedule:
         start: 1:10 PM
         end: 2:10 PM
         location: Online
+      - name: Discussion
+        start: 4:00 PM
+        end: 5:00 PM
+        location: Wheeler 224
   - name: Thursday
     events:
       - name: Discussion
         start: 4:00 PM
         end: 5:00 PM
         location: Wheeler 224
-      - name: Discussion
-        start: 5:00 PM
-        end: 6:00 PM
-        location: Cory 521
+      - name: GSI OH
+        start: 4:00 PM
+        end: 7:00 PM
+        location: Cory 504
   - name: Friday
 ---
