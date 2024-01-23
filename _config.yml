@@ -28,11 +28,11 @@ color_scheme: light
 search_enabled: true
 heading_anchors: true
 permalink: pretty
-# aux_links:
-#   Kevin Lin:
-#     - 'https://kevinl.info'
-#   Just the Class on GitHub:
-#     - 'https://github.com/kevinlin1/just-the-class'
+aux_links:
+  Piazza:
+    - 'https://piazza.com/class/lqqx0ycx8l33yq'
+  Gradescope:
+    - 'https://www.gradescope.com/courses/689970'
 footer_content:
 
 # Collections for website data
