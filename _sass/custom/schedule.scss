@@ -93,14 +93,14 @@
     }
 
     &.lecture {
-      background-color: $grey-dk-000;
+      background-color: $green-000;
     }
 
-    &.section {
+    &.discussion {
       background-color: $purple-000;
     }
 
-    &.office-hours {
+    &.instructor-oh {
       background-color: $blue-000;
     }
   }

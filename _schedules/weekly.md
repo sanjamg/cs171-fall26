@@ -22,45 +22,41 @@ schedule:
   - name: Monday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
         start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        end: 1:00 PM
+        location: Soda 306
+      - name: Discussion
+        start: 3:00 PM
+        end: 4:00 PM
+        location: Dwinelle 109
+      - name: Discussion
+        start: 4:00 PM
+        end: 5:00 PM
+        location: Cory 521
+      - name: Discussion
+        start: 5:00 PM
+        end: 6:00 PM
+        location: Cory 521
   - name: Tuesday
   - name: Wednesday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
         start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        end: 1:00 PM
+        location: Soda 306
+      - name: Instructor OH
+        start: 1:10 PM
+        end: 2:10 PM
+        location: Online
   - name: Thursday
-  - name: Friday
     events:
-      - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+      - name: Discussion
+        start: 4:00 PM
+        end: 5:00 PM
+        location: Wheeler 224
+      - name: Discussion
+        start: 5:00 PM
+        end: 6:00 PM
+        location: Cory 521
+  - name: Friday
 ---
