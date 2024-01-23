@@ -19,7 +19,7 @@ description: Introduction to Cryptography course website
 # author: Kevin Lin
 baseurl: '/' # the subpath of your site, e.g. /blog
 url: 'https://cs171-site.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor"]
 favicon_ico: "/assets/images/alice.ico"
 
 # Theme settings
