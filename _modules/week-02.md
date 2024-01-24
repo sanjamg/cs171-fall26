@@ -14,4 +14,4 @@ Jan 23
 
 Jan 24
 : **Lecture**{: .label .label-green } Modern cryptography: definitions, assumptions, and proofs. Perfect secrecy. The one-time pad. Limitations of perfect secrecy. A computational notion of security. Pseudorandomness and pseudorandom generators.
-: 2.1-2.3, 3.1, 3.2.1, and 3.3.1
+    : 2.1-2.3, 3.1, 3.2.1, and 3.3.1
