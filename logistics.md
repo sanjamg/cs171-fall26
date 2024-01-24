@@ -19,7 +19,11 @@ description: >-
 
 ## DSP Accomodations
 
-We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please send emails to bhaskarr@berkeley.edu for logistics on homework and exam submissions. _**Exam dates and policies**_ Please keep the following time slots free for any exam related activities.
+We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please send emails to bhaskarr@berkeley.edu for logistics on homework and exam submissions. 
+
+## Exam Dates
+
+Please keep the following time slots free for any exam related activities.
 
 *   Midterm I: Feb 14th (During class, Soda 306).
 *   Midterm II: Mar 20th (During class, Soda 306).
