@@ -4,7 +4,7 @@ title: Week 5
 
 Feb 12
 : **Lecture**{: .label .label-green } Chosen-ciphertext attacks (and review).
-    : 3.7
+    : KL 3.7
 : **Discussion**{: .label .label-purple } Discussion 4
 
 Feb 13
