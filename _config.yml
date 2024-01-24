@@ -33,6 +33,11 @@ aux_links:
     - 'https://piazza.com/class/lqqx0ycx8l33yq'
   Gradescope:
     - 'https://www.gradescope.com/courses/689970'
+  Course Calendar:
+    - 'https://calendar.google.com/calendar/embed?src=c_9651c6a31c93fc59d6bb9cbfe39725671c22cc13320176be4e239a60cf5b7be4%40group.calendar.google.com&ctz=America%2FLos_Angeles'
+  Course Capture:
+    - 'https://www.youtube.com/playlist?list=PLnocShPlK-FvBU5thQbLdX-njjoNstExS'
+
 footer_content:
 
 # Collections for website data

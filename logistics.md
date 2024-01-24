@@ -16,19 +16,6 @@ description: >-
 
 ---
 
-## Logistics
-
-*   **Time**: 11:30am--12:59 pm, Monday and Wednesday. (The class will start sharply at 11:40 am)
-*   **Location**: Soda 306.
-*   **Instructor**: Sanjam Garg ([sanjamg@berkeley.edu](mailto:sanjamg@berkeley.edu))
-*   **Office Hours**: Online, from 1:10 pm to 2:10 pm, on Wednesday or by email.
-*   **GSIs**: Bhaskar Roberts <bhaskarr@berkeley.edu>, Jaiden Keith Fairoze <fairoze@berkeley.edu>, Sriram Sridhar <srirams@berkeley.edu>, Darya Kaviani <daryakaviani@berkeley.edu>
-*   **Discussion Section**: M 3-4 pm (Dwinelle 109), M 4-5 pm (Cory 521), M 5-6 pm (Cory 521), Tu 5-6 pm (Wheeler 200), W 4-5 pm (Wheeler 224)
-*   **GSI Office Hours**: Th 4-7 pm (Location is TBA)
-*   **HWs:** Released every Tuesday and due 9 days later — next week Thursday — by 8:59 pm.
-*   [Course Calendar](https://calendar.google.com/calendar/embed?src=c_9651c6a31c93fc59d6bb9cbfe39725671c22cc13320176be4e239a60cf5b7be4%40group.calendar.google.com&ctz=America%2FLos_Angeles)
-*   [Course Capture Link](https://www.youtube.com/playlist?list=PLnocShPlK-FvBU5thQbLdX-njjoNstExS)
-
 ## Class Announcements & HW Submission
 
 We will be using this Piazza for all announcements and Gradescope for grading (uploading homeworks and grading of midterms and finals). **Please use** **entry code 2PY8Y4 for joining the class on Gradescope.** All homeworks will be due at 8:59 PM on the due-date. Please try to submit your homework on time. However, we understand that unforeseen difficulties may arise, so we have the following policy on late submissions. We hope that you will not need to use this policy. And please note that no exceptions whatsoever will be made to this policy.
