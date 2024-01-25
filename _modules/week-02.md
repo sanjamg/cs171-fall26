@@ -7,6 +7,7 @@ Jan 22
     : KL 1.4 and 2.1
 
 : **Discussion**{: .label .label-purple } [Discussion 1](/assets/discussion/disc1.pdf)
+    : [Solution](/assets/discussion/disc1-sol.pdf)
 
 Jan 23
 : **Homework**{: .label .label-yellow } [Homework 1](/assets/homework/hw1.pdf)
