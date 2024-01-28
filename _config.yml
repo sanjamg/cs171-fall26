@@ -29,8 +29,8 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  Piazza:
-    - 'https://piazza.com/class/lqqx0ycx8l33yq'
+  Ed:
+    - 'https://edstem.org/us/courses/55445/discussion/'
   Gradescope:
     - 'https://www.gradescope.com/courses/689970'
   Course Calendar:
