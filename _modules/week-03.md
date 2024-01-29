@@ -3,8 +3,8 @@ title: Week 3
 ---
 
 Jan 29
-: **Lecture**{: .label .label-green } Pseudorandom generators and stream ciphers. The pseudo-OTP. Proofs by reduction, and a proof of security for the pseudo-OTP.
-    : KL 3.3
+: **Lecture**{: .label .label-green } [Pseudorandomness. The pseudo-OTP. Proofs by reduction, and a proof of security for the pseudo-OTP.](/assets/lecture_slides/lec4.pdf)
+    : KL 3.3 and 3.4.1
 : **Discussion**{: .label .label-purple } Discussion 2
 
 Jan 30
