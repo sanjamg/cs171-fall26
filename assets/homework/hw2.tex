@@ -62,17 +62,17 @@ $$
 \Pr[\Enc(K,m_1) = c_1 \wedge \Enc(K,m_2) = c_2] = \Pr[\Enc(K,m'_1) = c_1 \wedge \Enc(K,m'_2) = c_2].
 $$
 Note that in the above definition the key $K$ is the same for encrypting $m_1,m_2$ (resp. $m'_1,m'_2$).
-Consider the following encryption scheme for the message space $\Z_{26}$.
+Consider the following encryption scheme for the message space $\Z_{23}$.
 \begin{itemize}
-    \item $\Gen$: Sample two elements $a \getsr \Z_{26} $ and $b \getsr \Z_{26}$.
-    \item $\Enc((a,b),m):$ Output $c = a\cdot m + b \mod 26$.
-    \item $\Dec((a,b),c):$ Compute $m = (c - b) \cdot a^{-1} \mod 26$ if $a$ is invertible. Otherwise, output error.
+    \item $\Gen$: Sample two elements $a \getsr \Z_{23} $ and $b \getsr \Z_{23}$.
+    \item $\Enc((a,b),m):$ Output $c = a\cdot m + b \mod 23$.
+    \item $\Dec((a,b),c):$ Compute $m = (c - b) \cdot a^{-1} \mod 23$ if $a$ is invertible. Otherwise, output error.
 \end{itemize}
 Show the following.
 \begin{enumerate}
-    \item Prove that for any message $m \in \Z_{26}$, 
+    \item Prove that for any message $m \in \Z_{23}$, 
     $$
-    \Pr[\Dec(K,\Enc(K,m)) = m] = \frac{25}{26}
+    \Pr[\Dec(K,\Enc(K,m)) = m] = \frac{22}{23}
     $$
     \item Prove that this is $2$-time secure.
 \end{enumerate}
