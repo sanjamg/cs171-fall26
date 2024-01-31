@@ -12,5 +12,5 @@ Jan 30
     : [Q3 Starter Code](/assets/homework/hw2.zip), [LaTeX](/assets/homework/hw2.tex)
 
 Jan 31
-: **Lecture**{: .label .label-green } Security for multiple encryptions. Drawbacks of deterministic encryption. Chosen-plaintext attacks and CPA-security. Pseudorandom Functions. CPA Secure Encryption from Pseudorandom Functions
+: **Lecture**{: .label .label-green } [Security for multiple encryptions. Drawbacks of deterministic encryption. Chosen-plaintext attacks and CPA-security. Pseudorandom Functions. CPA Secure Encryption from Pseudorandom Functions](assets/lecture_slides/lec5.pdf)
     : KL 3.4 and 3.5.2
