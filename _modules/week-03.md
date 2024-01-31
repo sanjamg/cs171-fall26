@@ -8,7 +8,8 @@ Jan 29
 : **Discussion**{: .label .label-purple } [Discussion 2](/assets/discussion/disc2.pdf)
 
 Jan 30
-: **Homework**{: .label .label-yellow } Homework 2
+: **Homework**{: .label .label-yellow } [Homework 2](/assets/homework/hw2.pdf)
+    : [Q3 Starter Code](/assets/homework/hw2.zip), [LaTeX](/assets/homework/hw2.tex)
 
 Jan 31
 : **Lecture**{: .label .label-green } Security for multiple encryptions. Drawbacks of deterministic encryption. Chosen-plaintext attacks and CPA-security. Pseudorandom Functions. CPA Secure Encryption from Pseudorandom Functions
