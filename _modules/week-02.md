@@ -11,7 +11,7 @@ Jan 22
 
 Jan 23
 : **Homework**{: .label .label-yellow } [Homework 1](/assets/homework/hw1.pdf)
-    : [LaTeX](/assets/homework/hw1.tex)
+    : [LaTeX](/assets/homework/hw1.tex) [Solution](/assets/homework/hw1-sol.pdf)
 
 Jan 24
 : **Lecture**{: .label .label-green } [Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.](/assets/lecture_slides/lec3.pdf)
