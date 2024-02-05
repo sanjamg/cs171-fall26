@@ -14,4 +14,4 @@ Jan 30
 
 Jan 31
 : **Lecture**{: .label .label-green } [Security for multiple encryptions. Drawbacks of deterministic encryption. Chosen-plaintext attacks and CPA-security. Pseudorandom Functions. CPA Secure Encryption from Pseudorandom Functions](assets/lecture_slides/lec5.pdf)
-    : KL 3.4 and 3.5.2
+    : KL 3.4 and 3.5

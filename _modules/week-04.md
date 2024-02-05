@@ -3,8 +3,8 @@ title: Week 4
 ---
 
 Feb 5
-: **Lecture**{: .label .label-green } CPA-security from stream ciphers and block ciphers.
-    : KL 3.5
+: **Lecture**{: .label .label-green } [Encryption from stream ciphers and block ciphers. Chosen-Ciphertext Attacks. Hybrid Arguments.]()
+    : KL 3.6 and 3.7
 : **Discussion**{: .label .label-purple } Discussion 3
 
 Feb 6
