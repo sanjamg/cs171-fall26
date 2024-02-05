@@ -11,5 +11,5 @@ Feb 6
 : **Homework**{: .label .label-yellow } Homework 3
 
 Feb 7
-: **Lecture**{: .label .label-green } Encrypting arbitrary-length messages: block-cipher modes of operation.
-    : KL 3.6
+: **Lecture**{: .label .label-green } Practical constructions of stream ciphers.
+    : KL 6.1.1-6.1.4
