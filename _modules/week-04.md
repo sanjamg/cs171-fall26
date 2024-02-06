@@ -8,7 +8,8 @@ Feb 5
 : **Discussion**{: .label .label-purple } [Discussion 3](/assets/discussion/disc3.pdf)
 
 Feb 6
-: **Homework**{: .label .label-yellow } Homework 3
+: **Homework**{: .label .label-yellow } [Homework 3](/assets/homework/hw3.pdf)
+    : [LaTeX](/assets/homework/hw3.tex)
 
 Feb 7
 : **Lecture**{: .label .label-green } Practical constructions of stream ciphers.

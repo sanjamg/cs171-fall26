@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+
+
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\adv}{\A}
+\newcommand{\B}{\mathcal{B}}
+
+\newcommand{\qed}{\hspace*{\fill}\rule{7pt}{7pt}}
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\newcommand{\duedate}{February 13th, 2024 at 8:59pm via \href{https://www.gradescope.com/courses/689970}{Gradescope}}
+
+
+\begin{document}
+
+\section*{CS 171: Problem Set 3\\ {\small Due Date: \duedate} }
+
+\subsection*{1. Pseudorandom Functions}
+Let $f: \bit^n \times \bit^n \rightarrow \bit^n$ be a pseudorandom function (PRF).  For the functions $f'$ below, either prove that $f'$ is a PRF (for all choices of $f$), or prove that $f'$ is not a PRF.
+\begin{enumerate}[(a)]
+\item $f'_k(x):= f_k(0||x) || f_k(1||x)$.
+\item $f'_k(x):= f_k(0||x) || f_k(x||1)$.
+\end{enumerate}
+
+\begin{solution}
+    TODO
+\end{solution}
+\pagebreak
+
+\subsection*{2. Weak CPA Security}
+Consider a weaker definition of CPA security where in the indistinguishability experiment the adversary $\A$ is not given oracle access to $\Enc_k(\cdot)$ after choosing $m_0, m_1$. That is, $\A$ can only query $\Enc_k(\cdot)$ in phase 1, but not in phase 2. We call this definition weak-CPA-security.
+Prove that weak-CPA-security is equivalent to CPA-security (i.e., Definition 3.22 in the textbook).\\
+
+\noindent\textit{Hint: Begin by showing via a hybrid argument that any $\A$ interacting in the usual CPA game cannot distinguish whether its phase 2 queries are answered honestly (that is, if the response to the query $m$ is $\Enc_k(m)$ or an encryption of $0$; $\Enc_k(0)$ -- something unrelated to $m$).}
+\\\\
+\begin{solution}
+    TODO
+\end{solution}
+\pagebreak
+
+\subsection*{3. Modes of operations are not CCA-Secure}
+Show that the CBC and CTR modes of encryption are not CCA-secure.
+\\\\
+\begin{solution}
+    TODO
+\end{solution}
+
+\end{document}
