@@ -12,5 +12,5 @@ Feb 6
     : [LaTeX](/assets/homework/hw3.tex)
 
 Feb 7
-: **Lecture**{: .label .label-green } Practical constructions of stream ciphers.
+: **Lecture**{: .label .label-green } [Practical constructions of stream ciphers.](/assets/lecture_slides/lec7.pdf)
     : KL 6.1.1-6.1.4
