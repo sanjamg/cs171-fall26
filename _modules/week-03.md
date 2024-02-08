@@ -6,7 +6,7 @@ Jan 29
 : **Lecture**{: .label .label-green } [Pseudorandomness. The pseudo-OTP. Proofs by reduction, and a proof of security for the pseudo-OTP.](/assets/lecture_slides/lec4.pdf)
     : KL 3.3
 : **Discussion**{: .label .label-purple } [Discussion 2](/assets/discussion/disc2.pdf)
-    : [Solution](/assets/discussion/disc2-sol.pdf)
+    : [Solution](/assets/discussion/disc2-sol.pdf), [Note On Negligible Functions](/assets/discussion/Negligible-Functions.pdf)
 
 Jan 30
 : **Homework**{: .label .label-yellow } [Homework 2](/assets/homework/hw2.pdf)
