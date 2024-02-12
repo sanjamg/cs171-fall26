@@ -10,7 +10,7 @@ Jan 29
 
 Jan 30
 : **Homework**{: .label .label-yellow } [Homework 2](/assets/homework/hw2.pdf)
-    : [Q3 Starter Code](/assets/homework/hw2.zip), [LaTeX](/assets/homework/hw2.tex), [Note On Negligible Functions](/assets/discussion/Negligible-Functions.pdf)
+    : [Q3 Starter Code](/assets/homework/hw2.zip), [LaTeX](/assets/homework/hw2.tex), [Note On Negligible Functions](/assets/discussion/Negligible-Functions.pdf), [Solutions](/assets/homework/hw2-sol.pdf)
 
 Jan 31
 : **Lecture**{: .label .label-green } [Security for multiple encryptions. Drawbacks of deterministic encryption. Chosen-plaintext attacks and CPA-security. Pseudorandom Functions. CPA Secure Encryption from Pseudorandom Functions](assets/lecture_slides/lec5.pdf)
