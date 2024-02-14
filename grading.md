@@ -22,6 +22,9 @@ description: >-
 *   Midterm II - 25%
 *   Final - 30%
 
+We have a partial clobber policy on the midterm exam; that is, your midterm score can be partially clobbered if you happen to do poorly. There is no clobber for the final exam (that is, your final exam score cannot be clobbered by your midterm score).
+
+In particular, if it helps your grade, we will replace your midterm exam z-score with the average of your midterm and final z-scores. For example, if you get -1std on the midterm and +2std on the final, your clobbered midterm z-score will be +0.5std and your final exam z-score will remain at +2std.
 
 ## Late HW Submission
 
