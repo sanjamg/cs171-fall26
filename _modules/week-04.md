@@ -10,7 +10,7 @@ Feb 5
 
 Feb 6
 : **Homework**{: .label .label-yellow } [Homework 3](/assets/homework/hw3.pdf)
-    : [LaTeX](/assets/homework/hw3.tex)
+    : [LaTeX](/assets/homework/hw3.tex), [Solutions](/assets/homework/hw3-sol.pdf)
 
 Feb 7
 : **Lecture**{: .label .label-green } [Practical constructions of stream ciphers. Substitution-permutation networks](/assets/lecture_slides/lec7.pdf)
