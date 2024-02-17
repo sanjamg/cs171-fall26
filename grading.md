@@ -31,7 +31,7 @@ In particular, if it helps your grade, we will replace your midterm exam z-score
 All homeworks will be due at 8:59 PM on the due-date. Please try to submit your homework on time. However, we understand that unforeseen difficulties may arise, so we have the following policy on late submissions. We hope that you will not need to use this policy. And please note that no exceptions whatsoever will be made to this policy.
 
 *   Late policy: (updated) Assignments submitted late will lose 5% for every hour that they are late. For example: If you submit 1 minute late on an assignment worth 80 points, you lose 4 points (5% of 80). If you submit 61 minutes late, you lose 8 points (10%).
-*   Homework drop policy: Best x-2 (out of x). For example, if 10 homeworks are given then we will score the best 8.
+*   Homework drop policy: Best x-3 (out of x). For example, if 10 homeworks are given then we will score the best 7.
 
 
 ## Collaboration

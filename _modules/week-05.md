@@ -9,5 +9,6 @@ Feb 12
     : [Solution](/assets/discussion/disc4-sol.pdf)
 
 Feb 14
-: **Midterm**{: .label .label-red } Midterm I
+: **Midterm**{: .label .label-red } Midterm I 
+    : [Solution](/assets/exams/mt1_sol.pdf)
 
