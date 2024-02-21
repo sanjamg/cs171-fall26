@@ -10,5 +10,5 @@ Feb 20
 : **Homework**{: .label .label-yellow } Homework 5
 
 Feb 21
-: **Lecture**{: .label .label-green } Message integrity and message authentication codes (MACs). Defining security for MACs. Constructing MACs.
+: **Lecture**{: .label .label-green } [Message integrity and message authentication codes (MACs). Defining security for MACs. Constructing MACs.](/assets/lecture_slides/lec9.pdf)
     : KL 4.1, 4.2, and 4.3
