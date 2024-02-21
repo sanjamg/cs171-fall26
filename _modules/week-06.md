@@ -5,7 +5,7 @@ title: Week 6
 Feb 19
 : No Class (President's Day)
 : **Discussion**{: .label .label-purple } Discussion 5 (reviewed midterm 1)
-    :[Midterm 1 Solution](/assets/exams/mt1_sol.pdf)
+    : [Midterm 1 Solution](/assets/exams/mt1_sol.pdf)
 
 Feb 20
 : **Homework**{: .label .label-yellow } [Homework 4](/assets/homework/hw4.pdf)
