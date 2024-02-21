@@ -4,10 +4,12 @@ title: Week 6
 
 Feb 19
 : No Class (President's Day)
-: **Discussion**{: .label .label-purple } Discussion 5
+: **Discussion**{: .label .label-purple } Discussion 5 (reviewed midterm 1)
+    :[Midterm 1 Solution](/assets/exams/mt1_sol.pdf)
 
 Feb 20
-: **Homework**{: .label .label-yellow } Homework 5
+: **Homework**{: .label .label-yellow } [Homework 4](/assets/homework/hw4.pdf)
+    : [LaTeX](/assets/homework/hw4.tex)
 
 Feb 21
 : **Lecture**{: .label .label-green } [Message integrity and message authentication codes (MACs). Defining security for MACs. Constructing MACs.](/assets/lecture_slides/lec9.pdf)

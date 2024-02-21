@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{cleveref}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newenvironment{solution}{\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+
+
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\adv}{\A}
+\newcommand{\B}{\mathcal{B}}
+
+\input{preamble.tex}
+\newcommand{\duedate}{February 29th, 2024 at 8:59pm via \href{https://www.gradescope.com/courses/689970}{Gradescope}}
+
+
+\begin{document}
+\section*{CS 171: Problem Set 4\\ {\small Due Date: \duedate} }
+
+\subsection*{1. Negligible and Non-Negligible Functions (10 points)}
+Define functions $f,g: \mathbb{N} \to \mathbb{R}_{\geq 0}$, and let $g(n) = 2^{-f(n)}$.
+
+\begin{enumerate}
+    \item Prove that if $f(n) = \omega(\log n)$, then $g(n)$ is negligible. Give a fully rigorous proof.
+    \item Prove that if $f(n) = O(\log n)$, then $g(n)$ is non-negligible. Give a fully rigorous proof.
+    \item Identify which of the following functions are negligible. There may be multiple negligible functions. No explanation is necessary for this part:
+    \begin{enumerate}
+        \item $g_1(n) = 2^{-\sqrt{n}}$
+        \item $g_2(n) = 2^{-(\log n)^{2}}$
+        \item $g_3(n) = 2^{-\sqrt{\log n}}$
+    \end{enumerate}
+\end{enumerate}
+
+\begin{solution}
+    TODO
+\end{solution}
+\pagebreak
+
+\subsection*{2. Two Versions of CPA security (10 points)}
+There are two common definitions of CPA security, which are given in definitions \ref{def:CPA-security-predicting-variant} and \ref{def:CPA-security-distinguishing-variant} below\footnote{These are analogous to the two definitions of security for EAV security (lecture 3, slides 19-20) and PRGs (lecture 4, slides 8-9)}. Prove that definitions \ref{def:CPA-security-predicting-variant} and \ref{def:CPA-security-distinguishing-variant} are equivalent, i.e. if a scheme is secure under one definition, then it is secure under the other definition. 
+
+\begin{definition}\label{def:CPA-security-predicting-variant}
+Let $\Pi = (\Gen, \Enc, \Dec)$ be an encryption scheme and let $\A$ be an adversary for the CPA security game. Define the CPA security game as follows:\newline
+
+\noindent\underline{$G_{\A, \Pi}(n)$}:
+\begin{enumerate}
+    \item The challenger samples a key $k \leftarrow \Gen(1^n)$.
+    \item The adversary $\A$ is given input $1^n$ and oracle access to $\Enc(k, \cdot)$, and outputs a pair of messages $(m_0, m_1)$ with $|m_0| = |m_1|$.
+    \item The challenger samples a bit $b \leftarrow \{0,1\}$, and computes the ciphertext $c \leftarrow \Enc(k, m_b)$. Then they give $c$ to $\A$.
+    \item $\A$ continues to have oracle access to $\Enc(k, \cdot)$ and outputs a bit $b'$.
+    \item The output of the game is $1$ if $b' = b$, and $0$ otherwise.
+\end{enumerate}
+
+We say that the encryption scheme $\Pi$ is CPA-secure if for all probabilistic polynomial-time (PPT) adversaries $\A$, there is a negligible function $\negl$ such that 
+\[\Pr\left[G_{\A, \Pi}(n) = 1\right] \leq \frac{1}{2} + \negl(n)\]    
+\end{definition}
+
+In definition \ref{def:CPA-security-distinguishing-variant} below, any changes from definition \ref{def:CPA-security-predicting-variant} are shown in \textcolor{red}{red}.
+\begin{definition}\label{def:CPA-security-distinguishing-variant}
+Let $\Pi = (\Gen, \Enc, \Dec)$ be an encryption scheme and let $\A$ be an adversary for the CPA security game. Define the CPA security game as follows:\newline
+
+\noindent\underline{$\textcolor{red}{H}_{\A, \Pi}(n\textcolor{red}{, b})$}:
+\begin{enumerate}
+    \item The challenger samples a key $k \leftarrow \Gen(1^n)$.
+    \item The adversary $\A$ is given input $1^n$ and oracle access to $\Enc(k, \cdot)$, and outputs a pair of messages $(m_0, m_1)$ with $|m_0| = |m_1|$.
+    \item \textcolor{red}{The challenger computes the ciphertext $c \leftarrow \Enc(k, m_b)$. Then they give $c$ to $\A$.}
+    \item $\A$ continues to have oracle access to $\Enc(k, \cdot)$ and outputs a bit $b'$. 
+    \item \textcolor{red}{The output of the game is $b'$.}
+\end{enumerate}
+
+We say that the encryption scheme $\Pi$ is CPA-secure if for all probabilistic polynomial-time (PPT) adversaries $\A$, there is a negligible function $\negl$ such that 
+\[\textcolor{red}{\big|\Pr\left[H_{\A, \Pi}(n, 0) = 1\right] - \Pr\left[H_{\A, \Pi}(n, 1) = 1\right]\big| \leq \negl(n)}\]
+\end{definition}
+
+\begin{solution}
+    TODO
+\end{solution}
+\pagebreak
+
+
+\section*{3. Feistel Network (10 points)}
+
+A Feistel network is used to construct a pseudorandom permutation $F$ given a pseudorandom function $f$ that is not necessarily a permutation\footnote{For more details, see Katz \& Lindell, 3rd edition, sections 7.2.2 and 8.6.}. However, if $f$ is not pseudorandom, then $F$ is potentially not pseudorandom either.
+
+Consider the following three-round Feistel network given in definition \ref{def:feistel_network} below\footnote{This definition is adapted from Katz \& Lindell, 3rd edition, construction 8.23.}.
+\begin{definition}[Three-Round Feistel Network $F$]\label{def:feistel_network}
+$ $
+\begin{enumerate}
+    \item Let $f: \{0,1\}^n \times \{0,1\}^{n}\to \{0,1\}^n$.
+    \item \textbf{Inputs:} Let $F$ take as input a key $k \in \{0,1\}^{3n}$ and an input $x \in \{0,1\}^{2n}$, which are parsed as:
+    \begin{align*}
+        k &= (k^1, k^2, k^3) \in \{0,1\}^n \times \{0,1\}^n \times \{0,1\}^n\\
+        x &= (L_0, R_0) \in \{0,1\}^{n} \times \{0,1\}^n
+    \end{align*}
+    \item \textbf{Computation:}
+    \begin{enumerate}
+        \item $F$ computes $L_1 := R_0$ and $R_1 := L_0 \oplus f(k^1, R_0)$.
+        \item $F$ computes $L_2 := R_1$ and $R_2 := L_1 \oplus f(k^2, R_1)$.
+        \item $F$ computes $L_3 := R_2$ and $R_3 := L_2 \oplus f(k^3, R_2)$.
+        \item $F$ outputs $(L_3, R_3)$.
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+
+Suppose that there was a flaw in the design of $f$ so that for all keys $k$ and all inputs $x$, the first bit of $f(k, x)$ equals the first bit of $x$. Show that there exists some efficient adversary $\A$ that can break the pseudorandom permutation security of $F$ \textit{by making only a single query to $F$}.\newline
+
+\begin{solution}
+    TODO
+\end{solution}
+
+\end{document}
