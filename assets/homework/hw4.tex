@@ -7,8 +7,6 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage[margin=1.2in]{geometry}
-\usepackage{cleveref}
-\usepackage[dvipsnames]{xcolor}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -16,8 +14,6 @@
 \setlength{\headsep}{20pt}
 \fancyhead[L]{\small{CS 171, Spring 2024}}
 \fancyhead[R]{\small{Prof. Sanjam Garg}}
-
-\newenvironment{solution}{\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
 
 \newcommand{\Gen}{\mathsf{Gen}}
 \newcommand{\Enc}{\mathsf{Enc}}
@@ -34,7 +30,6 @@
 \renewcommand{\H}{\mathcal{H}}
 \newcommand{\GF}{\mathsf{GF}}
 
-
 \newcommand{\M}{\mathcal{M}}
 
 \newcommand{\hyb}{\mathsf{Hyb}}
@@ -44,7 +39,20 @@
 \newcommand{\adv}{\A}
 \newcommand{\B}{\mathcal{B}}
 
-\input{preamble.tex}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section} 
+
+\newcommand{\qed}{\hspace*{\fill}\rule{7pt}{7pt}}
+\newenvironment{solution}{\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
 \newcommand{\duedate}{February 29th, 2024 at 8:59pm via \href{https://www.gradescope.com/courses/689970}{Gradescope}}
 
 
