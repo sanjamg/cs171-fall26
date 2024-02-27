@@ -74,7 +74,7 @@
 \section*{CS 171: Problem Set 5\\ {\small Due Date: \duedate} }
 
 \section{Insecure Candidates for MACs}
-Two candidate constructions of MACs are given below. The schemes use a pseudrandom function function $F$ that maps $\bit^n\times \bit^n \rightarrow \bit^n$. The differences between the schemes are shown in \textcolor{red}{red}.
+Two candidate constructions of MACs are given below. The schemes use a pseudrandom function function $F$ that maps $\bit^n\times \bit^n \rightarrow \bit^n$.
 
 Show that each of the following MAC schemes is insecure.
 
@@ -82,16 +82,18 @@ Show that each of the following MAC schemes is insecure.
     \item \underline{Scheme 1:}
     \begin{enumerate}
         \item $\Gen(1^n)$: Output $k \leftarrow \{0,1\}^n$.
-        \item $\mac(k, m)$: \textcolor{red}{Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n}$. Then $\mac$ outputs} 
-        \[\textcolor{red}{t := F(k, m_0) || F(k, m_0 \oplus m_1)}\]
+        \item $\mac(k, m)$: Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n}$. Then $\mac$ outputs 
+        \[t := F(k, m_0) || F(k, m_0 \oplus m_1)\]
         \item $\verify(k, m, t)$: Output $1$ if $t = \mac(k, m)$, and output $0$ otherwise.
     \end{enumerate}
 
     \item \underline{Scheme 2:}
     \begin{enumerate}
         \item $\Gen(1^n)$: Output $k \leftarrow \{0,1\}^n$.
-        \item $\mac(k, m)$: \textcolor{red}{Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n-1}$. Then $\mac$ samples $r \leftarrow \bit^{n}$, and outputs} \[\textcolor{red}{t:= r || \big[F(k, r) \oplus F(k, 0||m_0) \oplus F(k, 1||m_1)\big]}\]
-        \item $\verify(k, m, t)$: Output $1$ if $t = \mac(k, m)$, and output $0$ otherwise.
+        \item $\mac(k, m)$: Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n-1}$. Then $\mac$ samples $r \leftarrow \bit^{n}$, and outputs \[t:= r || \big[F(k, r) \oplus F(k, 0||m_0) \oplus F(k, 1||m_1)\big]\]
+        \item $\verify(k, m, t)$: Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n-1}$, and let $t = r || t'$, where $r, t' \in \bit^n$. Output $1$ if 
+        \[t' = F(k, r) \oplus F(k, 0||m_0) \oplus F(k, 1||m_1)\] 
+        and output $0$ otherwise.
     \end{enumerate}
 \end{enumerate}
 
