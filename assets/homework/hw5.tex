@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2021}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand\custombox[2]{%%
+    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
+
+\newcommand\answerbox{%%
+    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
+
+\newcommand{\qed}{\hspace*{\fill}\rule{7pt}{7pt}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+\newenvironment{proof_sketch}{\noindent{\bf Sketch of Proof} (Informal)\hspace*{1em}}{\qed\medskip}
+\newenvironment{proof}{\noindent{\bf Proof}\hspace*{1em}}{\qed\medskip}
+\newenvironment{proofof}[1]{\noindent{\bf Proof} of #1:\hspace*{1em}}{\qed\medskip}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\negl}{\mathsf{negl}}
+
+\newcommand{\adv}{\A}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\duedate}{March 7th, 2024 at 8:59pm via Gradescope}
+
+\newcommand{\MAC}{\mathsf{MAC}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\verify}{\mathsf{Verify}}
+\newcommand{\C}{\mathcal{C}}
+
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\begin{document}
+\section*{CS 171: Problem Set 5\\ {\small Due Date: \duedate} }
+
+\section{Insecure Candidates for MACs}
+Two candidate constructions of MACs are given below. The schemes use a pseudrandom function function $F$ that maps $\bit^n\times \bit^n \rightarrow \bit^n$. The differences between the schemes are shown in \textcolor{red}{red}.
+
+Show that each of the following MAC schemes is insecure.
+
+\begin{enumerate}
+    \item \underline{Scheme 1:}
+    \begin{enumerate}
+        \item $\Gen(1^n)$: Output $k \leftarrow \{0,1\}^n$.
+        \item $\mac(k, m)$: \textcolor{red}{Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n}$. Then $\mac$ outputs} 
+        \[\textcolor{red}{t := F(k, m_0) || F(k, m_0 \oplus m_1)}\]
+        \item $\verify(k, m, t)$: Output $1$ if $t = \mac(k, m)$, and output $0$ otherwise.
+    \end{enumerate}
+
+    \item \underline{Scheme 2:}
+    \begin{enumerate}
+        \item $\Gen(1^n)$: Output $k \leftarrow \{0,1\}^n$.
+        \item $\mac(k, m)$: \textcolor{red}{Let $m = m_0 || m_1$, where $m_0, m_1 \in \{0,1\}^{n-1}$. Then $\mac$ samples $r \leftarrow \bit^{n}$, and outputs} \[\textcolor{red}{t:= r || \big[F(k, r) \oplus F(k, 0||m_0) \oplus F(k, 1||m_1)\big]}\]
+        \item $\verify(k, m, t)$: Output $1$ if $t = \mac(k, m)$, and output $0$ otherwise.
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+
+\section{Encrypt-Then-Authenticate}
+The encrypt-then-authenticate approach constructs a CCA-secure encryption scheme using any CPA-secure encryption scheme and any \textit{strongly} secure MAC.\footnote{The encrypt-then-authenticate approach is described in Katz \& Lindell, 3rd edition, construction 5.6 and also in lecture 10, slide 21.} You will show that a MAC with regular security will not suffice.
+
+\begin{enumerate}
+    \item Describe a MAC $\MAC' := (\gen', \mac', \verify')$ that is secure but not strongly secure. In your construction, you may start with a secure MAC, $\MAC := (\gen, \mac, \verify)$.
+    \item Prove that $\MAC'$ is secure or cite a security proof given in discussion or lecture.\footnote{You don't need to prove that $\MAC'$ is not strongly secure.}
+    \item Prove that when $\MAC'$ is combined with any CPA-secure encryption scheme using encrypt-then-authenticate, it results in an encryption scheme that is not CCA-secure.
+\end{enumerate}
+
+\pagebreak
+
+
+\section{Randomized MACs}
+Previously we've dealt mainly with deterministic MACs, and here we will examine one reason why: we will show that any randomized MAC can be converted into a deterministic MAC using a PRF.
+
+A \textbf{randomized MAC} is a scheme where $\mac(k,m)$ is allowed to sample a uniformly random string $r$ each time it runs.\footnote{We sometimes sharpen our notation from $\mac(k,m)$ to $\mac(r;k,m)$ to make the algorithm's random input explicit.} A \textbf{deterministic MAC} is a scheme where $\mac(k,m)$ is a deterministic function of the inputs $(k,m)$.
+
+\paragraph{Question:} Given a randomized MAC $\Pi_R = (\gen_R,\allowbreak \mac_R,\allowbreak \verify_R)$, construct a deterministic MAC $\Pi_D = (\gen_D,\allowbreak \mac_D,\allowbreak \verify_D)$, and prove that $\Pi_D$ is secure.\footnote{The definition of security is given in Katz \& Lindell, 3rd edition, definition 4.2 and in lecture 9, slide 5.}
+
+You may assume that $\Pi_R$ takes $n$-bit messages and $l$-bit random strings, and $\Pi_D$ takes $n$-bit messages. In your construction, you may also use a PRF $F$ that maps $\bin^n \times \bin^{n} \to \bin^{l}$. \newline
+
+\noindent You may find it useful to follow the template below and fill in the blanks.\footnote{The size of each blank box below doesn't indicate how long your answer should be. The box just marks an incomplete section of the proof, and your answers will sometimes be larger than the boxes.}
+
+\begin{enumerate}
+\item \noindent\underline{Construction of $\Pi_D$:}
+\begin{enumerate}
+    \item $\Gen_D(1^n)$: Sample $k = (k_1, k_2) \leftarrow \bit^n \times \bit^n$ and output it.
+    \item $\mac_D(k,m)$:
+    \\\\ 
+    \custombox{5in}{.5in}\\
+    \item $\verify_D(k,m,t)$: Output $1$ if $\mac_D(k,m) = t$, and output $0$ otherwise.
+\end{enumerate}
+
+\item 
+\begin{claim}
+    $\Pi_D$ is a secure MAC.
+\end{claim}
+\begin{proof}
+\begin{enumerate}
+    \item We will define two hybrids and show that they are indistinguishable\footnote{We've given more detail for the hybrids than necessary. The extra detail is shown in \textcolor{gray}{gray}.}:
+    \begin{enumerate}
+        \item $\hyb_0$ is the MAC security game $\mathsf{MAC\text{-}forge}_{\A, \Pi_D}(n)$:
+        {\color{gray}\begin{enumerate}
+            \item Sample $k \leftarrow \gen_D(1^n)$.
+            \item \textit{Query Phase}: The adversary $\A$ gets oracle access to $\mac_D(k, \cdot)$. Let $\mathcal{Q}$ be the set of all the message queries that the adversary submits to the oracle.
+            \item $\A$ outputs $(m^*, t^*)$. The challenger checks that $\verify_D(k, m^*, t^*) = 1$ and $m^* \notin \mathcal{Q}$. The output of the game is $1$ if both checks passed and $0$ otherwise.
+        \end{enumerate}
+        }
+        
+        \item $\hyb_1$ is the same as $\hyb_0$ except that any calls to $F$ are replaced with calls to a uniformly random function $R$:
+        {\color{gray}\begin{enumerate}
+            \item Sample $k \leftarrow \gen_D(1^n)$, and sample a function $R$ uniformly at random from the set of functions that map $\bit^n \to \bit^{l}$.
+            \item \textit{Query Phase}: Let $\mac'(k, m)$ be the same as $\mac_D(k,m)$, except any calls to $F$ are replaced with calls to $R$. Next, the adversary $\A$ gets oracle access to $\mac'(k, \cdot)$. Finally, let $\mathcal{Q}$ be the set of all the message queries that the adversary submits to the oracle.
+            \item $\A$ outputs $(m^*, t^*)$. The challenger checks that $\verify_D(k, m^*, t^*) =1 $ and $m^* \notin \mathcal{Q}$. The output of the game is $1$ if both checks passed and $0$ otherwise.
+        \end{enumerate}
+        }
+\end{enumerate}
+
+\item 
+\begin{claim}
+For any probabilistic polynomial-time adversary $\A$, there exists a negligible function $\negl$ such that 
+\[\big|\Pr[\hyb_0 \to 1] - \Pr[\hyb_1 \to 1]\big| \leq \negl(n)\]    
+\end{claim}
+\begin{proof}
+    \\\\ 
+    \custombox{5in}{.5in}\\\\
+\end{proof}
+
+\item 
+\begin{claim}
+For any probabilistic polynomial-time adversary $\A$, there exists a negligible function $\negl$ such that 
+\[\Pr[\hyb_1 \to 1] \leq \negl(n)\]
+\end{claim}
+\begin{proof}
+    \\\\ 
+    \custombox{5in}{.5in}\\\\
+\end{proof}
+
+\item 
+Finish the proof:
+\\\\ 
+    \custombox{5in}{.5in}
+\end{enumerate}
+\end{proof}
+\end{enumerate}
+
+\end{document}
