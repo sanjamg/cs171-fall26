@@ -9,7 +9,7 @@ Feb 19
 
 Feb 20
 : **Homework**{: .label .label-yellow } [Homework 4](/assets/homework/hw4.pdf)
-    : [LaTeX](/assets/homework/hw4.tex)
+    : [LaTeX](/assets/homework/hw4.tex), [Solution](/assets/homework/hw4-sol.pdf)
 
 Feb 21
 : **Lecture**{: .label .label-green } [Message integrity and message authentication codes (MACs). Defining security for MACs. Constructing MACs.](/assets/lecture_slides/lec9.pdf)
