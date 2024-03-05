@@ -8,7 +8,8 @@ Mar 4
 : **Discussion**{: .label .label-purple } [Discussion 7](/assets/discussion/disc7.pdf)
 
 Mar 5
-: **Homework**{: .label .label-yellow } Homework 7
+: **Homework**{: .label .label-yellow } [Homework 6](/assets/homework/hw6.pdf)
+    : [LaTeX](/assets/homework/hw6.tex)
 
 Mar 6
 : **Lecture**{: .label .label-green } One-Way Functions and Implications (continued)

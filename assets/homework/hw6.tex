@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand\custombox[2]{%%
+    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
+
+\newcommand\answerbox{%%
+    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\negl}{\mathsf{negl}}
+
+\newcommand{\adv}{\A}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\duedate}{March 14th, 2024 at 8:59pm via Gradescope}
+
+
+\newcommand{\MAC}{\mathsf{MAC}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\verify}{\mathsf{Verify}}
+\newcommand{\C}{\mathcal{C}}
+
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\begin{document}
+\section*{CS 171: Problem Set 6\\ {\small Due Date: \duedate} }
+
+\section{One-Way Functions}
+Let $f:\bin^n \rightarrow \bin^n$ be a one-way function, and let
+\[g(x) = f(f(x))\] 
+Is $g$ necessarily a one-way function? Prove your answer. In your answer, you may use a OWF $h: \bit^{n/2} \to \bit^{n/2}$.\newline
+
+\noindent \emph{Tip:} Your answer should have one of the following forms. Only one of them is possible:
+\begin{itemize}
+    \item Prove that if $f$ is a OWF, then $g$ is also a OWF.
+    \item (1) Construct a function $f$. (2) Prove that $f$ is a one-way function. (3) Then prove that when $g$ is constructed from this choice of $f$, $g$ is not a one-way function.
+\end{itemize}
+Also, you may cite without proof any theorems proven in discussion or lecture.
+
+\pagebreak
+
+\section{Concatenated Hash Functions}
+Let $\mathcal{H}_1 = (\gen_1, H_1)$ and $\mathcal{H}_2 = (\gen_2, H_2)$ be two fixed-length hash functions that take inputs of length ${3n}$ bits and produce outputs of length $n$ bits. Only one of $\mathcal{H}_1$ and $\mathcal{H}_2$ is collision resistant; the other one is not collision-resistant, and you don't know which is which. 
+
+Next, we define two new hash functions $\mathcal{H}_3 = (\Gen_3, H_3)$ and $\mathcal{H}_4 = (\Gen_4, H_4)$ below: \\
+
+\noindent\underline{$\mathcal{H}_3$:}
+\begin{enumerate}
+    \item $\Gen_3(1^n)$: Sample $s_1 \leftarrow \Gen_1(1^n)$ and $s_2 \leftarrow \Gen_2(1^n)$. Output $s=(s_1, s_2)$.
+    \item $H_3^s(x)$: Output $H_1^{s_1}(x) || H_2^{s_2}(x)$.
+\end{enumerate}
+Note that $H_3^s: \bit^{3n} \to \bit^{2n}$.\\
+
+\noindent\underline{$\mathcal{H}_4$:}
+\begin{enumerate}
+    \item $\Gen_4(1^n)$: Sample $s_1 \leftarrow \Gen_1(1^n)$ and $s_2 \leftarrow \Gen_2(1^n)$. Output $s=(s_1, s_2)$.
+    \item $H_4^s(x)$: Let $x = (x_1, x_2) \in \bit^{3n} \times \bit^{3n}$. Output $H_1^{s_1}(x_1) || H_2^{s_2}(x_2)$.
+\end{enumerate}
+Note that $H_4^s: \bit^{6n} \to \bit^{2n}$.
+
+\paragraph{Question:} For each of $\mathcal{H}_3$ and $\mathcal{H}_4$, determine whether the hash function is collision-resistant, and prove your answer.
+
+\pagebreak
+
+
+\section{Hard-Concentrate Predicates}
+Let $f:\bit^n \to \bit^n$ be an efficiently computable one-to-one function. Prove that if $f$ has a hard-concentrate predicate\footnote{Hard-concentrate predicates are defined in Katz \& Lindell, 3rd edition, definition 8.4 under the name \emph{hard-core predicate}.}, then $f$ is one-way.
+
+\pagebreak
+\end{document}
