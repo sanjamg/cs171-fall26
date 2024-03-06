@@ -14,4 +14,4 @@ Feb 27
 
 Feb 28
 : **Lecture**{: .label .label-green } [Hash functions and collision resistance. Birthday attacks on hash functions. Additional applications of hash functions.](/assets/lecture_slides/lec11.pdf)
-    : KL 5.1.1 and 5.3.1, 5.4.1, and 5.6.1-5.6.3
+    : KL 5.1.1, 5.2, 5.3.1, 5.4.1, and 5.6.1-5.6.3
