@@ -10,7 +10,7 @@ Feb 26
 
 Feb 27
 : **Homework**{: .label .label-yellow } [Homework 5](/assets/homework/hw5.pdf)
-    : [LaTeX](/assets/homework/hw5.tex)
+    : [LaTeX](/assets/homework/hw5.tex), [Solution](/assets/homework/hw5-sol.pdf)
 
 Feb 28
 : **Lecture**{: .label .label-green } [Hash functions and collision resistance. Birthday attacks on hash functions. Additional applications of hash functions.](/assets/lecture_slides/lec11.pdf)
