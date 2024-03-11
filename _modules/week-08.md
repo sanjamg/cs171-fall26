@@ -12,6 +12,6 @@ Mar 5
     : [LaTeX](/assets/homework/hw6.tex)
 
 Mar 6
-: **Lecture**{: .label .label-green } [Groups. Hardness assumptions in cyclic groups: the discrete-logarithm assumption and Diffie-Hellman problems. Hash Functions Construction.](/assets/lecture_slides/lec13.pdf)
-    : KL 8.1.1-8.1.2 (self-study), 8.1.3, 8.3.1-8.3.3, and 8.4.2
+: **Lecture**{: .label .label-green } [Groups. Hardness assumptions in cyclic groups: the discrete-logarithm assumption and Diffie-Hellman problems. Hash Functions Construction. The Diffie-Hellman key-exchange protocol.](/assets/lecture_slides/lec13.pdf)
+    : KL 8.1.1-8.1.2 (self-study), 8.1.3, 8.3.1-8.3.3, 8.4.2, and 10
 
