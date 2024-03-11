@@ -8,8 +8,13 @@ description: Past exams and resources.
 
 ## Midterm 1
 
-- [Fall 2019](/assets/exams/f19_mt1.pdf), [Solutions](/assets/exams/f19_mt1_sol.pdf)
-- [Spring 2021](/assets/exams/s21_mt1.pdf), [Solutions](/assets/exams/s21_mt1_sol.pdf)
+- [Fall 2019](/assets/exams/f19_mt1.pdf), [Solution](/assets/exams/f19_mt1_sol.pdf)
+- [Spring 2021](/assets/exams/s21_mt1.pdf), [Solution](/assets/exams/s21_mt1_sol.pdf)
+
+## Midterm 2
+
+- [Fall 2019](/assets/exams/f19_mt2.pdf), [Solution](/assets/exams/f19_mt2_sol.pdf)
+- [Spring 2021](/assets/exams/s21_mt2.pdf), [Solution](/assets/exams/s21_mt2_sol.pdf)
 
 # Proof Workshop
 
