@@ -9,7 +9,8 @@ Mar 11
 : **Discussion**{: .label .label-purple } [Discussion 8](/assets/discussion/disc8.pdf)
 
 Mar 12
-: **Homework**{: .label .label-yellow } Homework 8
+: **Homework**{: .label .label-yellow } [Homework 7](/assets/homework/hw7.pdf)
+    : [LaTeX](/assets/homework/hw7.tex)
 
 Mar 13
 : **Lecture**{: .label .label-green } TBD.

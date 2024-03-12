@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand\custombox[2]{%%
+    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
+
+\newcommand\answerbox{%%
+    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\enc}{\mathsf{Enc}}
+\newcommand{\dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\nonnegl}{\mathsf{non}\text{-}\mathsf{negl}}
+\newcommand{\msg}{\mathsf{msg}}
+\newcommand{\st}{\mathsf{st}}
+
+\newcommand{\adv}{\A}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\duedate}{March 18th, 2024 at 8:59pm via Gradescope. No late submissions will be accepted.}
+
+
+\newcommand{\MAC}{\mathsf{MAC}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\verify}{\mathsf{Verify}}
+\newcommand{\C}{\mathcal{C}}
+
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+
+\begin{document}
+\section*{CS 171: Problem Set 7\\ {\small Due Date: \duedate} }
+
+
+\section{PRGs Imply OWFs (5 points)}
+We saw in lecture 12 that one-way functions (OWFs) can be used to construct pseudorandom generators (PRGs). Additionally, it turns out that PRGs can be used to construct OWFs. This means that the assumption that OWFs exist is equally strong as the assumption that PRGs exist.
+
+\paragraph{Question: } Let $G: \{0,1\}^{n/2} \to \{0,1\}^n$ be a PRG. Prove that $G$ is also a OWF.\\
+
+\begin{solution}
+
+\end{solution}
+
+\pagebreak
+
+\section{A Candidate Key-Exchange Protocol (5 points)}
+Consider the following proposal for a key exchange protocol:
+\begin{enumerate}
+\item Alice samples $k \leftarrow \bit^n$ and $r \leftarrow \bit^n$, and sends Bob the following: 
+\[s := k \oplus r\]
+\item Bob samples $t \leftarrow \bit^n$, and sends Alice the following: 
+\[u := s \oplus t\]
+\item Alice sends Bob the following: 
+\[w := u \oplus r\]
+\item Alice outputs $k$ and Bob outputs $w \oplus t$.
+\end{enumerate}
+
+\paragraph{Questions:}
+
+\begin{enumerate}[(a)]
+    \item \emph{Correctness:} Show that Alice and Bob will always output the same key $k$.
+    \item \emph{Security:} Does this scheme satisfy key-exchange security\footnote{Key-exchange security is also known as $\mathsf{KE}^{\mathsf{eav}}_{\A,\Pi}$ security. It was defined in lecture 13, slide 26, as well as in Katz \& Lindell, 3rd Edition, Definition 11.1.}? Prove your answer.
+\end{enumerate}$ $
+
+\begin{solution}
+    
+\end{solution}
+
+\end{document}
