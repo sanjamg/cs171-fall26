@@ -13,5 +13,5 @@ Mar 12
     : [LaTeX](/assets/homework/hw7.tex)
 
 Mar 13
-: **Lecture**{: .label .label-green } [Hybrid encryption and the KEM/DEM paradigm. El Gamal encryption. Composite Order Groups. RSA Encryption](/assets/lecture_slides/lec14.pdf)
+: **Lecture**{: .label .label-green } [Hybrid encryption and the KEM/DEM paradigm. El Gamal encryption. Composite Order Groups. RSA Encryption](/assets/lecture_slides/lec15.pdf)
     : 11.3 (skip proof of Theorem 11.12), 11.4.2, and 11.5.1 
