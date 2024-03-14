@@ -7,6 +7,7 @@ Mar 11
     : KL 11.1 11.2, 11.4.1, and 11.4.4 (only the discussion that El Gamal encryption is malleable).
 
 : **Discussion**{: .label .label-purple } [Discussion 8](/assets/discussion/disc8.pdf)
+    : [Solution](/assets/discussion/disc8-sol.pdf)
 
 Mar 12
 : **Homework**{: .label .label-yellow } [Homework 7](/assets/homework/hw7.pdf)
