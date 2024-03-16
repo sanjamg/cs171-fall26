@@ -16,3 +16,7 @@ Mar 12
 Mar 13
 : **Lecture**{: .label .label-green } [Hybrid encryption and the KEM/DEM paradigm. El Gamal encryption. Composite Order Groups. RSA Encryption](/assets/lecture_slides/lec15.pdf)
     : 11.3 (skip proof of Theorem 11.12), 11.4.2, and 11.5.1 
+
+Mar 15
+: **Midterm Review Session**{: .label .label-purple } 
+    : [Slides](/assets/resources/CS_171_MT2_Review_Session.pdf), [Recording](https://drive.google.com/file/d/1x1aD4KoVePGlSCgBt1_YNNfXJ0NE_7O7/view?usp=sharing)
