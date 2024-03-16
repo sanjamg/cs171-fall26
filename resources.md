@@ -21,3 +21,7 @@ description: Past exams and resources.
 - [Recording](https://drive.google.com/file/d/1PKVq_EuLOAAk7SjuRwsSRbsUC47R6s0k/view?usp=sharing)
 - [Notes](/assets/resources/proofworkshopnotes.pdf)
 - [Slides](/assets/resources/proofworkshopslides.pdf)
+
+# Midterm 2 Review Session
+
+- [Slides](/assets/resources/CS_171_MT2_Review_Session.pdf)
