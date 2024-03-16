@@ -10,7 +10,7 @@ Mar 4
 
 Mar 5
 : **Homework**{: .label .label-yellow } [Homework 6](/assets/homework/hw6.pdf)
-    : [LaTeX](/assets/homework/hw6.tex)
+    : [LaTeX](/assets/homework/hw6.tex), [Solution](/assets/homework/hw6-sol.pdf)
 
 Mar 6
 : **Lecture**{: .label .label-green } [Groups. Hardness assumptions in cyclic groups: the discrete-logarithm assumption and Diffie-Hellman problems. Hash Functions Construction. The Diffie-Hellman key-exchange protocol.](/assets/lecture_slides/lec13.pdf)
