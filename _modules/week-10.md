@@ -3,7 +3,7 @@ title: Week 10
 ---
 
 Mar 18
-: **Lecture**{: .label .label-green } Review for Midterm II
+: **Lecture**{: .label .label-green } [Review for Midterm II](/assets/lecture_slides/lec16.pdf)
 : **Discussion**{: .label .label-purple } Discussion 9
 
 Mar 20
