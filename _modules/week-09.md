@@ -11,7 +11,7 @@ Mar 11
 
 Mar 12
 : **Homework**{: .label .label-yellow } [Homework 7](/assets/homework/hw7.pdf)
-    : [LaTeX](/assets/homework/hw7.tex)
+    : [LaTeX](/assets/homework/hw7.tex), [Solution](/assets/homework/hw7-sol.pdf)
 
 Mar 13
 : **Lecture**{: .label .label-green } [Hybrid encryption and the KEM/DEM paradigm. El Gamal encryption. Composite Order Groups. RSA Encryption](/assets/lecture_slides/lec15.pdf)
