@@ -24,4 +24,5 @@ description: Past exams and resources.
 
 # Midterm 2 Review Session
 
+- [Recording](https://drive.google.com/file/d/1x1aD4KoVePGlSCgBt1_YNNfXJ0NE_7O7/view?usp=sharing)
 - [Slides](/assets/resources/CS_171_MT2_Review_Session.pdf)
