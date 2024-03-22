@@ -7,4 +7,5 @@ Mar 18
 : **Discussion**{: .label .label-purple } Discussion 9
 
 Mar 20
-: **Midterm**{: .label .label-red } Midterm II
+: **Midterm**{: .label .label-red } [Midterm II](/assets/exams/mt2.pdf) 
+    : [Solution](/assets/exams/mt2_sol.pdf)
