@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand\custombox[2]{%%
+    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
+
+\newcommand\answerbox{%%
+    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\enc}{\mathsf{Enc}}
+\newcommand{\dec}{\mathsf{Dec}}
+\newcommand{\Sign}{\mathsf{Sign}}
+\newcommand{\sign}{\mathsf{Sign}}
+\newcommand{\Verify}{\mathsf{Verify}}
+\newcommand{\verify}{\mathsf{Verify}}
+\newcommand{\MAC}{\mathsf{MAC}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\pk}{\mathsf{pk}}
+\newcommand{\sk}{\mathsf{sk}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\G}{\mathcal{G}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\nonnegl}{\mathsf{nonnegl}}
+\newcommand{\msg}{\mathsf{msg}}
+\newcommand{\st}{\mathsf{st}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\adv}{\A}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\duedate}{April 11th, 2024 at 8:59pm via Gradescope}
+
+\newcommand{\C}{\mathcal{C}}
+
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\begin{document}
+\section*{CS 171: Problem Set 8\\ {\small Due Date: \duedate} }
+
+\section{A New Version of CDH (10 Points)}
+We will consider a modified version of the CDH (computational Diffie-Hellman) problem in which an adversary is given $g^x$ and asked to compute $g^{x^2}$. We will show that this modified CDH problem is as hard as the regular CDH problem.
+
+\begin{definition}[CDH Game $\mathsf{CDH}(n, \G, \A)$]
+$ $
+\begin{enumerate}
+    \item Inputs: $n$ is the security parameter. $\G$ is an algorithm that generates a group $\GG$ of prime order $q$. $\A$ is a PPT adversary.
+    \item The challenger samples $(\GG, q, g) \leftarrow \G(1^n)$ and also samples $x, y \leftarrow \ZZ_q$ independently. Then, the challenger sends to $\A$ the inputs $(\GG, q, g, g^x, g^y)$.
+    \item $\A$ outputs $h \in \GG$. If $h = g^{x \cdot y}$, then the output of the game is $1$ (win). Otherwise, the output of the game is $0$ (lose).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Modified CDH Game $\mathsf{mCDH}(n, \G, \B)$]
+$ $
+\begin{enumerate}
+    \item Inputs: $n$ is the security parameter. $\G$ is an algorithm that generates a group $\GG$ of prime order $q$. $\B$ is a PPT adversary.
+    \item The challenger samples $(\GG, q, g) \leftarrow \G(1^n)$ and also samples $x \leftarrow \ZZ_q$. Then, the challenger sends to $\B$ the inputs $(\GG, q, g, g^x)$.
+    \item $\B$ outputs $h \in \GG$. If $h = g^{\left(x^2\right)}$, then the output of the game is $1$ (win). Otherwise, the output of the game is $0$ (lose).
+\end{enumerate}
+\end{definition}
+
+\paragraph{Question:} 
+\begin{enumerate}
+    \item Prove that if there exists a PPT adversary $\A$ for which $\Pr[\mathsf{CDH}(n, \G, \A) \to 1]$ is non-negligible, then there exists a PPT adversary $\B$ for which $\Pr[\mathsf{mCDH}(n, \G, \B) \to 1]$ is non-negligible.
+    \item Prove that if there exists a PPT adversary $\B$ for which $\Pr[\mathsf{mCDH}(n, \G, \B) \to 1]$ is non-negligible, then there exists a PPT adversary $\A$ for which $\Pr[\mathsf{CDH}(n, \G, \A) \to 1]$ is non-negligible.
+\end{enumerate}
+Together, these claims show that the modified CDH problem is hard if and only if the CDH problem is hard.\\
+
+\begin{solution}
+TBD
+\end{solution}
+\pagebreak
+
+\section{Large-Domain CRHFs From Discrete Log (10 Points)}
+
+We saw in lecture\footnote{See lecture 13, slides 19-20.} how to construct a CRHF assuming the discrete log problem is hard. The CRHF maps $\ZZ_q^2 \to \GG$ (where $\GG$ is a cryptographic group of size $q$). In this problem, we will extend the domain to $\ZZ_q^t$ for any $t = \mathsf{poly}(n)$.
+
+\begin{definition}[A Hash Function $\H = (\Gen, H)$]
+$ $
+\begin{itemize}
+    \item $\gen(1^n)$: Run $\G(1^n)$ to obtain $(\GG, q, g)$. Then sample group elements $h_1,\dots, h_{t-1} \gets \GG$ independently and uniformly at random. Then output: 
+    \[s : = \big( \GG, q, g, (h_1,\dots, h_{t-1}) \big)\] 
+    as the key.
+    \item $H^s(x)$ takes input $x = (x_1, \dots, x_t) \in \ZZ_q^{t}$. Then it outputs 
+    \[H^s(x_1,\dots, x_t) := g^{x_t} \cdot \prod_{i=1}^{t-1} h_i^{x_i}\]
+\end{itemize}
+\end{definition}
+
+\paragraph{Question:} Prove that $\mathcal{H}$ is collision-resistant by completing the proof of theorem \ref{thm:dlog-implies-CRHF-security} below.
+
+\begin{theorem}\label{thm:dlog-implies-CRHF-security}
+    If the discrete log problem is hard for $\mathcal{G}$, then $\mathcal{H}$ is collision-resistant.
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+    \item \underline{Overview:} Assume for the purpose of contradiction that $\mathcal{H}$ is not collision-resistant. Then there exists a PPT adversary $\A$ that, on a randomly generated $s$, outputs a collision with non-negligible probability. Then we will construct a PPT adversary $\B$ that breaks the discrete log assumption.
+    \item $\B$ will embed the discrete log instance into one index $i \in \{1, \dots, t-1\}$ of the CRHF and sample the other indices of the CRHF randomly.\\
+    
+    \underline{Construction of $\B$:}
+    \begin{enumerate}
+        \item Receive $(\GG, q, g, h)$ from the challenger.
+        \item Sample $i \gets \{1,\dots, t-1\}$, and set $h_i := h$.
+        \item For each $j \in \{1,\dots, t-1\} \setminus\{i\}$, randomly choose $a_j \gets \ZZ_q$ and set $h_j := g^{a_j}$.
+        \item Run $\A$ on $\big( \GG, q, g, (h_1,\dots, h_{t-1}) \big)$, and receive a collision $(x_1, \dots, x_t)$ and $(x'_1, \dots, x'_t)$.
+        \item In this case, $\B$ outputs
+        \[y = \custombox{3in}{.5in}\]
+        as the discrete log of $h$.
+    \end{enumerate}
+    \begin{solution}
+            
+    \end{solution}
+
+    \item \begin{lemma}\label{thm:B-breaks-dlog}
+        If $\A$ breaks the collision-resistance of $\mathcal{H}$, then $\B$ solves the discrete log problem with non-negligible probability.
+    \end{lemma}
+    \begin{proof}\\
+    
+        \custombox{5in}{.5in}\\
+        
+        \begin{solution}
+        \end{solution}
+    \end{proof}\\
+    Note: The size of the box above does not indicate the size of the proof. The proof will most likely not fit in the box.
+\end{enumerate}
+\end{proof}
+\pagebreak
+
+\section{Signatures (10 Points)}
+Let $\Pi = (\Gen, \Sign, \Verify)$ be a (secure) signature scheme that accepts messages $m \in \bit^n$. We will use $\Pi$ to construct a candidate signature scheme $\Pi'$ that introduces additional randomness into the signing algorithm.\\
+
+\noindent\underline{$\Pi' = (\Gen', \Sign', \Verify')$:}
+    \begin{enumerate}
+        \item $\Gen'(1^n)$: Same as $\Gen(1^n)$.
+        \item $\Sign'(\sk, m)$: 
+        \begin{enumerate}
+            \item Let $m \in \bit^n$. Then sample $r \leftarrow \bit^n$.
+            \item Compute $\sigma_0 = \Sign(\sk, m \oplus r)$ and $\sigma_1 = \Sign(\sk, r)$.
+            \item Output $\sigma = (r, \sigma_0, \sigma_1)$.
+        \end{enumerate}
+        \item $\Verify'(\pk, m, \sigma)$: Output $1$ if $\Verify(\pk, m \oplus r, \sigma_0) = 1$ and $\Verify(\pk, r, \sigma_1) = 1$. Output $0$ otherwise.
+    \end{enumerate}
+
+\paragraph{Question:} Indicate whether or not $\Pi'$ is necessarily secure, and prove your answer.\\
+
+\begin{solution}
+
+\end{solution}
+
+\end{document}

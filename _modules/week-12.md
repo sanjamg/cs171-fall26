@@ -8,7 +8,8 @@ Apr 1
 : **Discussion**{: .label .label-purple } [Discussion 9](/assets/discussion/disc9.pdf)
 
 Apr 2
-: **Homework**{: .label .label-yellow } Homework 8
+: **Homework**{: .label .label-yellow } [Homework 8](/assets/homework/hw8.pdf)
+    : [LaTeX](/assets/homework/hw8.tex)
 
 Apr 3
 : **Lecture**{: .label .label-green }  Pairings, Identity Based Encryption, CCA Secure Encryption
