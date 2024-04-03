@@ -12,5 +12,5 @@ Apr 2
     : [LaTeX](/assets/homework/hw8.tex)
 
 Apr 3
-: **Lecture**{: .label .label-green }  Pairings, Identity Based Encryption, CCA Secure Encryption
-    :  
+: **Lecture**{: .label .label-green }  [Pairings, Identity Based Encryption, CCA Secure Public-Key Encryption](/assets/lecture_slides/lec18.pdf)
+    :  Special Topics
