@@ -3,11 +3,15 @@ title: Week 14
 ---
 
 Apr 15
-: **Lecture**{: .label .label-green } Commitments and Zero-Knowledge Proofs
+: **Lecture**{: .label .label-green } [Succinct Proofs](/assets/lecture_slides/lec21.pdf)
+    : Special Topics
+
 : **Discussion**{: .label .label-purple } Discussion 11
 
 Apr 16
 : **Homework**{: .label .label-yellow } Homework 10
 
 Apr 17
-: **Lecture**{: .label .label-green } Zero-Knowledge Continued
+: **Lecture**{: .label .label-green } [Succinct Proofs](/assets/lecture_slides/lec22.pdf)
+    : Special Topics
+

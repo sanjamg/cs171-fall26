@@ -3,12 +3,13 @@ title: Week 13
 ---
 
 Apr 8
-: **Lecture**{: .label .label-green } Public-Key Encryption (RSA and Post-Quantum Encryption)
+: **Lecture**{: .label .label-green } [Commitment Schemes](/assets/lecture_slides/lec19.pdf)
+    : Special Topics
 : **Discussion**{: .label .label-purple } Discussion 10
 
 Apr 9
 : **Homework**{: .label .label-yellow } Homework 9
 
 Apr 10
-: **Lecture**{: .label .label-green } Digital signatures. The hash-and-sign paradigm. Schnorr Signature Scheme. Certificates and public-key infrastructures.
-    : KL 12.1-12.3, 12.5.1 and 12.7
+: **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](/assets/lecture_slides/lec20.pdf)
+    : Special Topics
