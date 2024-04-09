@@ -8,7 +8,8 @@ Apr 8
 : **Discussion**{: .label .label-purple } [Discussion 10](/assets/discussion/disc10.pdf)
 
 Apr 9
-: **Homework**{: .label .label-yellow } Homework 9
+: **Homework**{: .label .label-yellow } [Homework 9](/assets/homework/hw9.pdf)
+    : [Q3 Starter Code](/assets/homework/hw9.zip), [LaTeX](/assets/homework/hw9.tex)
 
 Apr 10
 : **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](/assets/lecture_slides/lec20.pdf)

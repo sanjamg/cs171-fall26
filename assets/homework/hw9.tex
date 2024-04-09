@@ -1,0 +1,206 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand\custombox[2]{%%
+    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
+
+\newcommand\answerbox{%%
+    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\enc}{\mathsf{Enc}}
+\newcommand{\dec}{\mathsf{Dec}}
+\newcommand{\Sign}{\mathsf{Sign}}
+\newcommand{\sign}{\mathsf{Sign}}
+\newcommand{\Verify}{\mathsf{Verify}}
+\newcommand{\verify}{\mathsf{Verify}}
+\newcommand{\MAC}{\mathsf{MAC}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\setup}{\mathsf{Setup}}
+\newcommand{\keygen}{\mathsf{KeyGen}}
+\newcommand{\mpk}{\mathsf{mpk}}
+\newcommand{\msk}{\mathsf{msk}}
+\newcommand{\pk}{\mathsf{pk}}
+\newcommand{\sk}{\mathsf{sk}}
+\newcommand{\pp}{\mathsf{pp}}
+\newcommand{\params}{\mathsf{pp}}
+\newcommand{\id}{\mathsf{ID}}
+\newcommand{\ct}{\mathsf{ct}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\G}{\mathcal{G}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\nonnegl}{\mathsf{nonnegl}}
+\newcommand{\msg}{\mathsf{msg}}
+\newcommand{\st}{\mathsf{st}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\adv}{\A}
+
+\newcommand{\hyb}{\mathsf{Hyb}}
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\duedate}{April 18th, 2024 at 8:59pm via Gradescope}
+
+\newcommand{\C}{\mathcal{C}}
+
+\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+
+\begin{document}
+\section*{CS 171: Problem Set 9\\ {\small Due Date: \duedate} }
+
+\section{Bounded Collusion Identity-Based Encryption}
+In Discussion 10, we gave a candidate construction of IBE that is insecure if the attacker is allowed to make two queries to $\keygen(\msk, \cdot)$.
+
+\paragraph{Question:} Prove that if DDH is hard for $\GG$ and if the attacker is only allowed to make one query to $\keygen(\msk, \cdot)$, then the attacker cannot break CPA security for this IBE scheme.
+
+\subsection*{Security Definition}
+Here is the CPA security definition for bounded collusion IBE, in more detail. One way to phrase the question above is to prove that the construction of IBE given in Discussion 10 is CPA-secure with collusion bound $k=1$.
+\begin{definition}[CPA Security Game for Bounded Collusion IBE]
+Let $n\in \mathbb{N}$ be the security parameter, let $\A$ be the adversary, and let $k \in \mathbb{N}$ be the maximum number of queries to $\keygen(\msk, \cdot)$ that $\A$ is allowed to make.\\
+
+\underline{$\G(n, k, \A)$:}
+\begin{enumerate}
+    \item The challenger samples $(\mpk, \msk) \leftarrow \setup(1^n)$ and $b \leftarrow \bit$. Then they send $\mpk$ to the adversary $\A$.
+    \item $\A$ can make at most $1$ encryption query and $k$ KeyGen queries, which are defined below. The queries can be made in any order.
+    \begin{enumerate}
+        \item \textbf{Encryption Query:} $\A$ produces an $\id^*$ along with two messages $(m_0, m_1)$ of the same length. The challenger encrypts $m_b$ as follows:
+        \[\ct = \enc(\mpk, \id^*, m_b)\]
+        returns $\ct$ to $\A$.
+        \item \textbf{KeyGen Query:} $\A$ queries $\keygen(\msk, \cdot)$ on any $\id \neq \id^*$ and receives $\sk_\id$. 
+    \end{enumerate}
+    We reiterate that $\A$ cannot make a KeyGen query and an encryption query on the same $\id^*$.
+    \item $\A$ outputs a bit $b'$. The output of $\G(n, k, \A)$ is $1$ if $b' = b$ and $0$ otherwise.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[CPA Security for Bounded Collusion IBE]
+    We say that the IBE scheme is \textbf{CPA-secure with collusion bound $\mathbf{k}$} if for all PPT adversaries $\A$, 
+    \[\Pr[\G(n, k, \A) \to 1] \leq \frac{1}{2} + \negl(n)\]
+\end{definition}
+\pagebreak
+
+
+\section{Digital Signatures From Bilinear Maps}
+We will construct a digital signature scheme using a bilinear map and a random oracle.\\
+
+Let $\G(1^n)$ generate the parameters of a bilinear map -- $(\GG, \GG_T, q, g, e)$ -- for which the \textit{decisional bilinear Diffie-Hellman} problem (DBDH) is hard.
+Let $\GG \times \GG$ be the message space, and let $H: \GG \to \GG$ be a random oracle (a truly random function that all parties have access to).
+
+Consider the following digital signature scheme $\Pi = (\gen, \sign, \verify)$:
+\begin{enumerate}
+\item $\gen(1^n)$: 
+\begin{enumerate}
+    \item Generate the parameters of a bilinear map: $\params = (\GG, \GG_T, q, g, e) \leftarrow \G(1^n)$.
+    \item Sample $x_1, x_2 \leftarrow \ZZ_q$ independently, and compute $h_1 = g^{x_1}$ and $h_2 = g^{x_2}$.
+    \item Output $\pk=(\params, h_1, h_2)$ and $\sk = (\params, x_1, x_2)$.
+\end{enumerate}
+
+\item $\sign(\sk, m)$: Let $m = (m_1, m_2) \in \GG \times \GG$. Then output 
+\[\sigma = (\sigma_1, \sigma_2) = \big(H(m_1)^{x_1}, H(m_2)^{x_2}\big)\]
+\item $\verify(\pk, m, \sigma)$: TBD
+\end{enumerate}
+
+\paragraph{Questions:}
+\begin{enumerate}
+    \item Fill in $\verify(\pk, m, \sigma)$ so that the scheme is both correct and secure. Furthermore, $\verify(\pk, m, \sigma)$ should not compute $e$ more than $3$ times.
+
+    It is computationally expensive to compute $e$, so we want to minimize the number of times $e$ is computed.
+    
+    \item Prove that $\Pi$ is correct, that any honestly generated signature will be accepted by $\verify(\pk, m, \sigma)$.
+    \item Let us modify the construction so that $H$ is now just the identity function: $H(h) = h$ for all $h \in \GG$. Prove that with this modification, the signature scheme is insecure.
+\end{enumerate}
+
+Note: We won't have you prove the security of $\Pi$ since the proof is a little more advanced than what we cover in this course. 
+\pagebreak
+
+
+\section{Merkle Proofs\footnote{This problem is adapted from \href{https://cs251.stanford.edu/hw/proj1.pdf}{this project}.}}
+You will write a Python function to generate a Merkle proof.\\ 
+
+\noindent You can learn more about Merkle proofs \href{https://decentralizedthoughts.github.io/2020-12-22-what-is-a-merkle-tree/}{here}, and you can download the starter code \href{https://eecs171.com/assets/homework/hw9.zip}{here}. The starter code folder contains the following files:
+\begin{itemize}
+    \item \texttt{prover.py}: This script generates the Merkle proof and writes it to a file for the verifier to read. Specifically it writes the leaf position, the leaf value, and the hashes used to prove the leaf’s presence at the given position in the Merkle tree.
+
+    \textbf{Your job is to implement the function \texttt{gen\_merkle\_proof}().} The missing code can be implemented in less than ten lines of Python.
+
+    Example of running \texttt{prover.py}: Run ``\texttt{python3 prover.py 683}'' from the command line. This script first calls the function \texttt{gen\_leaves\_for\_merkle\_tree()} to generate a thousand strings that will make up the leaves of a Merkle tree. Next it calls the method \texttt{gen\_merkle\_proof()} to generate the hashes for the Merkle proof for leaf number 683. Finally, it writes the Merkle proof to a text file \texttt{merkle\_proof.txt}.
+
+    \item \texttt{verifier.py}: The script reads in the Merkle proof generated by the prover and verifies that the leaf is at the stated position. Note that the value \texttt{ROOT} is hardcoded into this script. \texttt{ROOT} is the root for the Merkle tree whose leaves were generated by \texttt{gen\_leaves\_for\_merkle\_tree()}.
+    
+    \textbf{Do not make any changes to this file.} 
+    
+    \item \texttt{merkle\_utils.py}: This python script contains helpers used for generating and verifying the proof. 
+    
+    \textbf{Do not make any changes to this file.}
+
+    \item \texttt{proof-for-leaf-95.txt}: This is an example Merkle proof for leaf \#95. 
+    
+    Once you've finished editing \texttt{prover.py}, try generating the Merkle proof for leaf \#95 with the command ``\texttt{python3 prover.py 95}'', and then compare the result to the expected output provided in \texttt{proof-for-leaf-95.txt}.
+\end{itemize}
+
+\paragraph{Another Test:} After you implement the function \texttt{gen\_merkle\_proof()} in \texttt{prover.py}, run the following two scripts and check that your output matches the output below:\\
+
+\noindent\texttt{\$ python3 prover.py 683\\
+\indent I generated 1000 leaves for a Merkle tree of height 10.\\
+\indent I generated a Merkle proof for leaf \#683 in file merkle\_proof.txt\\}
+
+\noindent\texttt{\$ python3 verifier.py 683\\
+\indent I verified the Merkle proof: leaf \#683 in the committed tree is "data item 683".}\\
+
+Try changing one character in \texttt{merkle\_proof.txt} and check that the verifier now rejects the proof.
+
+\paragraph{Deliverables:} Please submit your file \texttt{prover.py} on Gradescope. The autograder will test your prover on random leaves.
+
+\paragraph{Tips:} 
+To help you understand the starter code, try to answer the following questions for yourself. You do not need to submit your answers to these questions:
+    \begin{itemize}
+        \item What does the verifier expect you to include in the proof?
+        \item How is height defined?
+        \item What is the purpose of the padding in \texttt{gen\_merkle\_proof()}?
+    \end{itemize}
+
+\end{document}
