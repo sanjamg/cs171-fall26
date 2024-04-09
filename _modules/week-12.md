@@ -14,4 +14,4 @@ Apr 2
 
 Apr 3
 : **Lecture**{: .label .label-green }  [Pairings, Identity Based Encryption, CCA Secure Public-Key Encryption](/assets/lecture_slides/lec18.pdf)
-    :  Special Topics
+    :  [Boneh & Shoup](http://toc.cryptobook.us/book.pdf), Chapter 15
