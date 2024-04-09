@@ -57,7 +57,7 @@ schedule:
         start: 4:00 PM
         end: 5:00 PM
         location: Wheeler 224
-      - name: GSI OH (Only for 4/10)
+      - name: GSI OH
         start: 4:00 PM
         end: 7:00 PM
         location: Cory 540AB
