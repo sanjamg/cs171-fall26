@@ -92,7 +92,7 @@
 \begin{document}
 \section*{CS 171: Problem Set 9\\ {\small Due Date: \duedate} }
 
-\section{Bounded Collusion Identity-Based Encryption}
+\section{Bounded Collusion Identity-Based Encryption (10 Points)}
 In Discussion 10, we gave a candidate construction of IBE that is insecure if the attacker is allowed to make two queries to $\keygen(\msk, \cdot)$.
 
 \paragraph{Question:} Prove that if DDH is hard for $\GG$ and if the attacker is only allowed to make one query to $\keygen(\msk, \cdot)$, then the attacker cannot break CPA security for this IBE scheme.
@@ -124,7 +124,7 @@ Let $n\in \mathbb{N}$ be the security parameter, let $\A$ be the adversary, and 
 \pagebreak
 
 
-\section{Digital Signatures From Bilinear Maps}
+\section{Digital Signatures From Bilinear Maps (10 Points)}
 We will construct a digital signature scheme using a bilinear map and a random oracle.\\
 
 Let $\G(1^n)$ generate the parameters of a bilinear map -- $(\GG, \GG_T, q, g, e)$ -- for which the \textit{decisional bilinear Diffie-Hellman} problem (DBDH) is hard.
@@ -158,7 +158,7 @@ Note: We won't have you prove the security of $\Pi$ since the proof is a little 
 \pagebreak
 
 
-\section{Merkle Proofs\footnote{This problem is adapted from \href{https://cs251.stanford.edu/hw/proj1.pdf}{this project}.}}
+\section{Merkle Proofs (10 Points)\footnote{This problem is adapted from \href{https://cs251.stanford.edu/hw/proj1.pdf}{this project}.}}
 You will write a Python function to generate a Merkle proof.\\ 
 
 \noindent You can learn more about Merkle proofs \href{https://decentralizedthoughts.github.io/2020-12-22-what-is-a-merkle-tree/}{here}, and you can download the starter code \href{https://eecs171.com/assets/homework/hw9.zip}{here}. The starter code folder contains the following files:
