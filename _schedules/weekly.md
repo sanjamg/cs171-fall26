@@ -52,7 +52,7 @@ schedule:
       - name: Instructor OH
         start: 1:10 PM
         end: 2:10 PM
-        location: Online
+        location: Soda 685
       - name: Discussion
         start: 4:00 PM
         end: 5:00 PM
