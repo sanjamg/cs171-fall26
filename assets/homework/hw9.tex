@@ -127,34 +127,30 @@ Let $n\in \mathbb{N}$ be the security parameter, let $\A$ be the adversary, and 
 \section{Digital Signatures From Bilinear Maps (10 Points)}
 We will construct a digital signature scheme using a bilinear map and a random oracle.\\
 
-Let $\G(1^n)$ generate the parameters of a bilinear map -- $(\GG, \GG_T, q, g, e)$ -- for which the \textit{decisional bilinear Diffie-Hellman} problem (DBDH) is hard.
-Let $\GG \times \GG$ be the message space, and let $H: \GG \to \GG$ be a random oracle (a truly random function that all parties have access to).
+Let $\G(1^n)$ generate the parameters of a bilinear map -- $(\GG, \GG_T, q, g, e)$ -- for which the \textit{decisional bilinear Diffie-Hellman} problem (DBDH) is hard. Let $\GG$ be the message space, and let $H: \GG \to \GG$ be a random oracle (a truly random function that all parties have access to).
 
 Consider the following digital signature scheme $\Pi = (\gen, \sign, \verify)$:
 \begin{enumerate}
 \item $\gen(1^n)$: 
 \begin{enumerate}
     \item Generate the parameters of a bilinear map: $\params = (\GG, \GG_T, q, g, e) \leftarrow \G(1^n)$.
-    \item Sample $x_1, x_2 \leftarrow \ZZ_q$ independently, and compute $h_1 = g^{x_1}$ and $h_2 = g^{x_2}$.
-    \item Output $\pk=(\params, h_1, h_2)$ and $\sk = (\params, x_1, x_2)$.
+    \item Sample $x \leftarrow \ZZ_q$ independently, and compute $h = g^{x}$.
+    \item Output $\pk=(\params, h)$ and $\sk = (\params, x)$.
 \end{enumerate}
 
-\item $\sign(\sk, m)$: Let $m = (m_1, m_2) \in \GG \times \GG$. Then output 
-\[\sigma = (\sigma_1, \sigma_2) = \big(H(m_1)^{x_1}, H(m_2)^{x_2}\big)\]
+\item $\sign(\sk, m)$: Let $m \in \GG$. Then output 
+\[\sigma = H(m)^{x}\]
 \item $\verify(\pk, m, \sigma)$: TBD
 \end{enumerate}
 
 \paragraph{Questions:}
 \begin{enumerate}
-    \item Fill in $\verify(\pk, m, \sigma)$ so that the scheme is both correct and secure. Furthermore, $\verify(\pk, m, \sigma)$ should not compute $e$ more than $3$ times.
-
-    It is computationally expensive to compute $e$, so we want to minimize the number of times $e$ is computed.
-    
+    \item Fill in $\verify(\pk, m, \sigma)$ so that the scheme is both correct and secure.
     \item Prove that $\Pi$ is correct, that any honestly generated signature will be accepted by $\verify(\pk, m, \sigma)$.
-    \item Let us modify the construction so that $H$ is now just the identity function: $H(h) = h$ for all $h \in \GG$. Prove that with this modification, the signature scheme is insecure.
+    \item Let us modify the construction so that $H$ is now just the identity function: $H(m) = m$ for all $m \in \GG$. Prove that with this modification, the signature scheme is insecure.
 \end{enumerate}
 
-Note: We won't have you prove the security of $\Pi$ since the proof is a little more advanced than what we cover in this course. 
+Note: We won't have you prove the security of $\Pi$ since the proof is a little more advanced than what we cover in this course. \\
 \pagebreak
 
 

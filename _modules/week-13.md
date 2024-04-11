@@ -6,6 +6,7 @@ Apr 8
 : **Lecture**{: .label .label-green } [Commitment Schemes](/assets/lecture_slides/lec19.pdf)
     : Special Topics
 : **Discussion**{: .label .label-purple } [Discussion 10](/assets/discussion/disc10.pdf)
+    : [Solution](/assets/discussion/disc10-sol.pdf)
 
 Apr 9
 : **Homework**{: .label .label-yellow } [Homework 9](/assets/homework/hw9.pdf)
