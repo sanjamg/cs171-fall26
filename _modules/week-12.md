@@ -10,7 +10,7 @@ Apr 1
 
 Apr 2
 : **Homework**{: .label .label-yellow } [Homework 8](/assets/homework/hw8.pdf)
-    : [LaTeX](/assets/homework/hw8.tex)
+    : [LaTeX](/assets/homework/hw8.tex), [Solution](/assets/homework/hw8-sol.pdf)
 
 Apr 3
 : **Lecture**{: .label .label-green }  [Pairings, Identity Based Encryption, CCA Secure Public-Key Encryption](/assets/lecture_slides/lec18.pdf)
