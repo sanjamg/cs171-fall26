@@ -97,31 +97,34 @@ In Discussion 10, we gave a candidate construction of IBE that is insecure if th
 
 \paragraph{Question:} Prove that if DDH is hard for $\GG$ and if the attacker is only allowed to make one query to $\keygen(\msk, \cdot)$, then the attacker cannot break CPA security for this IBE scheme.
 
-\subsection*{Security Definition}
-Here is the CPA security definition for bounded collusion IBE, in more detail. One way to phrase the question above is to prove that the construction of IBE given in Discussion 10 is CPA-secure with collusion bound $k=1$.
-\begin{definition}[CPA Security Game for Bounded Collusion IBE]
-Let $n\in \mathbb{N}$ be the security parameter, let $\A$ be the adversary, and let $k \in \mathbb{N}$ be the maximum number of queries to $\keygen(\msk, \cdot)$ that $\A$ is allowed to make.\\
+Note: You may assume that the adversary outputs the IDs used in its encryption and KeyGen queries at the start of the security game.\footnote{It is possible to prove security without this restriction, but that would require reprogramming the random oracle, which is an advanced technique that we won't cover in this class.}
 
-\underline{$\G(n, k, \A)$:}
+\subsection*{Security Definition}
+Here is the definition of security that we will use in this problem.
+
+\begin{definition}[Weak CPA Security Game for Bounded Collusion IBE]
+Let $n\in \mathbb{N}$ be the security parameter, and let $\A$ be the adversary.\\
+
+\underline{$\G(n, \A)$:}
 \begin{enumerate}
+    \item The adversary outputs two different IDs $(\id_E, \id_K)$, which will be used for the encryption and KeyGen queries respectively.\footnote{In the regular CPA security game for IBE, the adversary can choose $\id_E, \id_K$ later on.} Note that $\id_E \neq \id_K$.
     \item The challenger samples $(\mpk, \msk) \leftarrow \setup(1^n)$ and $b \leftarrow \bit$. Then they send $\mpk$ to the adversary $\A$.
-    \item $\A$ can make at most $1$ encryption query and $k$ KeyGen queries, which are defined below. The queries can be made in any order.
+    \item $\A$ can make at most $1$ encryption query and $1$ KeyGen query, which are defined below. The queries can be made in any order.
     \begin{enumerate}
-        \item \textbf{Encryption Query:} $\A$ produces an $\id^*$ along with two messages $(m_0, m_1)$ of the same length. The challenger encrypts $m_b$ as follows:
-        \[\ct = \enc(\mpk, \id^*, m_b)\]
-        returns $\ct$ to $\A$.
-        \item \textbf{KeyGen Query:} $\A$ queries $\keygen(\msk, \cdot)$ on any $\id \neq \id^*$ and receives $\sk_\id$. 
+        \item \textbf{Encryption Query:} $\A$ outputs $\id_E$ along with two messages $(m_0, m_1)$ of the same length. The challenger encrypts $m_b$ as follows:
+        \[\ct = \enc(\mpk, \id_E, m_b)\]
+        The challenger returns $\ct$ to $\A$.\\
+        \item \textbf{KeyGen Query:} $\A$ queries $\keygen(\msk, \cdot)$ on $\id_K$ and receives $\sk_{\id_K}$. 
     \end{enumerate}
-    We reiterate that $\A$ cannot make a KeyGen query and an encryption query on the same $\id^*$.
-    \item $\A$ outputs a bit $b'$. The output of $\G(n, k, \A)$ is $1$ if $b' = b$ and $0$ otherwise.
+    \item $\A$ outputs a bit $b'$. The output of $\G(n, \A)$ is $1$ if $b' = b$ and $0$ otherwise.
 \end{enumerate}
 \end{definition}
 
-\begin{definition}[CPA Security for Bounded Collusion IBE]
-    We say that the IBE scheme is \textbf{CPA-secure with collusion bound $\mathbf{k}$} if for all PPT adversaries $\A$, 
-    \[\Pr[\G(n, k, \A) \to 1] \leq \frac{1}{2} + \negl(n)\]
+\begin{definition}[Weak CPA Security for Bounded Collusion IBE]
+    We say that the IBE scheme is \textbf{weakly CPA-secure with collusion bound $1$} if for all PPT adversaries $\A$, 
+    \[\Pr[\G(n, \A) \to 1] \leq \frac{1}{2} + \negl(n)\]
 \end{definition}
-\pagebreak
+
 
 
 \section{Digital Signatures From Bilinear Maps (10 Points)}
