@@ -6,7 +6,7 @@ Apr 15
 : **Lecture**{: .label .label-green } [Succinct Proofs](/assets/lecture_slides/lec21.pdf)
     : Special Topics
 
-: **Discussion**{: .label .label-purple } Discussion 11
+: **Discussion**{: .label .label-purple } [Discussion 11](/assets/discussion/disc11.pdf)
 
 Apr 16
 : **Homework**{: .label .label-yellow } Homework 10
