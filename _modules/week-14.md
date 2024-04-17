@@ -7,6 +7,7 @@ Apr 15
     : Special Topics
 
 : **Discussion**{: .label .label-purple } [Discussion 11](/assets/discussion/disc11.pdf)
+    : [Solution]((/assets/discussion/disc11-sol.pdf))
 
 Apr 16
 : **Homework**{: .label .label-yellow } Homework 10
