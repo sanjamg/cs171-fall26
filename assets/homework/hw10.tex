@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\dec}{\mathsf{Dec}}
+\newcommand{\Setup}{\mathsf{Setup}}
+\newcommand{\Commit}{\mathsf{Commit}}
+\newcommand{\Open}{\mathsf{Open}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\GG}{\mathbb{G}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\msg}{\mathsf{msg}}
+\newcommand{\st}{\mathsf{st}}
+\newcommand{\pk}{\mathsf{pk}}
+\newcommand{\srs}{\mathsf{srs}}
+\newcommand{\pp}{\mathsf{pp}}
+\newcommand{\sk}{\mathsf{sk}}
+\newcommand{\ct}{\mathsf{ct}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\sfa}{\mathsf{a}}
+\newcommand{\sfb}{\mathsf{b}}
+\newcommand{\sfc}{\mathsf{c}}
+\newcommand{\sft}{\mathsf{t}}
+\newcommand{\sfx}{\mathsf{x}}
+\newcommand{\sfy}{\mathsf{y}}
+\newcommand{\sfz}{\mathsf{z}}
+
+\newcommand{\secp}{\lambda}
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\nonnegl}{\mathsf{non}\text{-}\mathsf{negl}}
+
+
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\duedate}{April 25, 2024 at 8.59pm via Gradescope}
+
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\sign}{\mathsf{Sign}}
+\newcommand{\verify}{\mathsf{Vrfy}}
+\newcommand{\C}{\mathcal{C}}
+
+\newcommand{\qed}{\hspace*{\fill}\rule{7pt}{7pt}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\numberwithin{equation}{section}
+\newenvironment{proof}{\noindent{\bf Proof}\hspace*{1em}}{\qed\medskip}
+\newenvironment{solution}{\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
+
+\begin{document}
+
+
+
+\section*{CS 171: Problem Set 10\\ {\small Due Date: \duedate} }
+
+
+\section{Course Evaluation (5 Points)}
+Complete your course evaluation for this course. You can write as much or as little as you want. Include a screenshot of the submission receipt when you submit this assignment to Gradescope to prove that you've finished your evaluation.\pagebreak
+
+
+\section{Proof of Decryption (10 Points)}
+We will construct a zero-knowledge proof system for DDH triples. This can be used to prove that a given El Gamal ciphertext was decrypted correctly without revealing the secret decryption key.\\
+
+Let $\pp = (\GG, q, g) \leftarrow \mathcal{G}(1^n)$ be a group in which DDH is hard. Let $\cL$ be the language of DDH triples for this group:
+\[\cL = \{(\pp, g^\sfa, g^\sfb, g^\sfc) : \sfc = \sfa \cdot \sfb \mod q\}\]
+
+Given an instance $x = (\pp, g^\sfa, g^\sfb, g^\sfc) \in \cL$, let the corresponding witness be $w = \sfb$. The witness provides a simple way to verify that $x \in \cL$:
+\[R(x, w) = 
+\begin{cases}
+    1 \text{ if } & g^{w} = g^\sfb \text{ and } (g^\sfa)^w = g^{\sfc}\\
+    0 & \text{ else }
+\end{cases}\]
+
+We can also prove that $x \in \cL$ without revealing the witness to the verifier. To do so, we will construct a zero-knowledge proof below.\\
+
+\noindent\underline{A Zero-Knowledge Protocol for $\cL$:}
+\begin{itemize}
+    \item \underline{Inputs:} The prover $P$ takes inputs $(1^\secp, x, w)$ and the verifier $V$ takes inputs $(1^\secp, x)$. $x = (\pp, g^\sfa, g^\sfb, g^\sfc)$, and $w \in \ZZ_q$.
+    \item $P$ samples $\sfx \leftarrow \ZZ_q$, computes $\sft = \sfa \cdot \sfx \mod q$, and sends $(g^\sfx,g^{\sft})$ to $V$. 
+    \item $V$ samples $\sfy \leftarrow \mathbb{Z}_q$ and sends $\sfy$ to $P$.
+    \item $P$ computes $\sfz = w \cdot \sfy + \sfx$ and sends $\sfz$ to $V$.
+    \item Final step: TBD
+\end{itemize}
+
+\paragraph{Questions:} 
+\begin{enumerate}
+    \item Fill in the final step to show how $V$ should verify the proof $(g^\sfx,g^{\sft}, \sfy, \sfz)$.
+    \item Show that this proof system satisfies completeness and soundness.
+    \item Show that this proof system satisfies honest-verifier zero-knowledge.
+\end{enumerate}
+
+The definitions of completeness, soundness, and honest-verifier zero-knowledge are given in Discussion 11.
+\pagebreak
+
+
+\section{Hiding and Binding For KZG Commitments (15 Points)}
+In discussion 11, we showed that the basic KZG commitment protocol is not hiding because the $\mathsf{Commit}$ function is deterministic. In section \ref{sec:randomized-KZG-commitment-construction} below, we give a modified version of the scheme in which the $\mathsf{Commit}$ function is randomized.
+
+\paragraph{Question:} Prove that the commitment scheme given in section \ref{sec:randomized-KZG-commitment-construction} satisfies the notions of hiding and polynomial binding given in section \ref{sec:hiding-and-polynomial-binding}, assuming that the $d$-discrete log problem is hard.
+
+\subsection{A Randomized Polynomial Commitment Scheme}\label{sec:randomized-KZG-commitment-construction}
+
+\begin{enumerate}
+    \item $\Gen(1^n)$: \begin{enumerate}
+        \item Let $d$ be polynomial in $n$.
+        \item Set up a bilinear map by sampling 
+        \[\pp = (\GG, \GG_T, q, g, e) \leftarrow \G(1^n)\]
+        \item Sample $h \leftarrow \GG$ and $\tau \leftarrow \ZZ_q^*$.
+        \item Finally, output
+        \[\mathsf{params} = \left(\pp, g^{\tau}, g^{(\tau^2)}, \dots, g^{(\tau^{d})}, h, h^{\tau}, h^{(\tau^2)}, \dots, h^{(\tau^{d})}\right)\]
+    \end{enumerate}
+    \item $\Commit(\mathsf{params}, f)$:
+    \begin{enumerate}
+        \item Let $f$ be a polynomial $\in \ZZ_q[X]$ of degree $\leq d$:
+        \[f(X) = \sum_{i = 0}^{d} \alpha_i \cdot X^i\]
+        where every $\alpha_i \in \ZZ_q$.
+        \item Sample a polynomial $r \in \ZZ_q[X]$ of degree $\leq d$ uniformly at random. In other words, sample $\beta_0, \dots, \beta_d \leftarrow \ZZ_q$ independently and uniformly at random, and let 
+        \[r(X) = \sum_{i = 0}^d \beta_i \cdot X^i\]
+        \item Compute and output the commitment:
+        \begin{align*}
+            \mathsf{com} &= \prod_{i = 0}^{d} \left(g^{(\tau^i)}\right)^{\beta_i} \cdot \prod_{i = 0}^{d} \left(h^{(\tau^i)}\right)^{\alpha_i}\\
+            &= g^{r(\tau)} \cdot h^{f(\tau)}
+        \end{align*}
+    \end{enumerate}
+
+\emph{Note}: We also define $\Commit(\mathsf{params}, f; r)$ to take the random polynomial $r$ as input, rather than sampling $r$ internally.
+\end{enumerate}
+\pagebreak
+
+
+\subsection{Definitions}\label{sec:hiding-and-polynomial-binding}
+Hiding basically says that $\Commit(f, \mathsf{params})$ doesn't reveal any information about $f$. The definition of hiding resembles the definition of CPA security.
+\begin{definition}[Hiding]
+$ $\\
+
+\noindent\underline{$\mathsf{Hiding\text{-}Game}(n, \A)$:}
+\begin{enumerate}
+    \item The challenger samples $\mathsf{params} \leftarrow \Gen(1^n)$ and sends $\mathsf{params}$ to the adversary $\A$.
+    \item $\A$ outputs two polynomials $f_0, f_1 \in \ZZ_q[X]$ of degree $\leq d$.
+    \item The challenger samples $b \leftarrow \bit$ and computes:
+    $\mathsf{com}^* = \Commit(\mathsf{params}, f_b)$. They send $\mathsf{com}^*$ to $\A$.
+    \item $\A$ outputs a guess $b'$ for $b$. The output of the game is $1$ if $b' = b$ and $0$ otherwise.
+\end{enumerate}
+
+The commitment scheme is \textbf{hiding} if for any PPT adversary $\A$,
+\[\Pr[\mathsf{Hiding\text{-}Game}(n, \A) \to 1] \leq \frac{1}{2} + \negl(n)\]
+\end{definition}
+
+Next, we'll consider a notion called polynomial binding, which says that the adversary cannot find two inputs to $\Commit$ that produce the same commitment.  This resembles the definition of collision-resistance.
+\begin{definition}[Polynomial Binding]
+$ $\\
+
+\noindent\underline{$\mathsf{Polynomial\text{-}Binding\text{-}Game}(n, \A)$:}
+\begin{enumerate}
+    \item The challenger samples $\mathsf{params} \leftarrow \Gen(1^n)$ and sends $\mathsf{params}$ to the adversary $\A$.
+    \item $\A$ outputs two pairs $(f_0, r_0)$ and $(f_1, r_1)$, where $f_0, r_0, f_1, r_1$ are polynomials $\in \ZZ_q[X]$ of degree $\leq d$.
+    \item The output of the game is $1$ if $f_0 \neq f_1$, and
+    \[\Commit(\mathsf{params}, f_0; r_0) = \Commit(\mathsf{params}, f_1; r_1)\]
+    Otherwise, the output of the game is $0$.
+\end{enumerate}
+The commitment scheme satisfies \textbf{polynomial binding} if 
+\[\Pr[\mathsf{Polynomial\text{-}Binding\text{-}Game}(n, \A) \to 1] \leq \negl(n)\]
+\end{definition}
+
+Finally, we will prove polynomial binding using the hardness of the following problem.
+\begin{definition}[A Variant of Discrete Log]\label{def:d-discrete-log}
+$ $\\
+\noindent\underline{$d\text{-}\mathsf{Discrete}\text{-}\mathsf{Log}(n, \A)$:}
+\begin{enumerate}
+    \item Let $d$ be polynomial in $n$. 
+    \item The challenger samples $\pp = (\GG, \GG_T, q, g, e) \leftarrow \G(1^n)$ as well as $\tau \leftarrow \ZZ_q$. Then they send the adversary:
+    $\left(\pp, g^{\tau}, g^{(\tau^2)}, \dots, g^{(\tau^{d})}\right)$
+    \item The adversary $\A$ outputs a guess $\tau'$ for $\tau$. The output of the game is $1$ if $\tau' = \tau$ and $0$ otherwise.
+\end{enumerate}
+The $d$-discrete-log problem is hard if for any PPT adversary $\A$, 
+\[\Pr[d\text{-}\mathsf{Discrete}\text{-}\mathsf{Log}(n, \A) \to 1] \leq \negl(n)\]
+\end{definition}
+Note that if the $d$-discrete-log problem is hard, then in addition, the regular discrete log problem is hard for $\GG$.
+
+\end{document}

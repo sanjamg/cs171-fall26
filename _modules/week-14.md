@@ -9,8 +9,9 @@ Apr 15
 : **Discussion**{: .label .label-purple } [Discussion 11](/assets/discussion/disc11.pdf)
     : [Solution](/assets/discussion/disc11-sol.pdf)
 
-Apr 16
-: **Homework**{: .label .label-yellow } Homework 10
+Apr 17
+: **Homework**{: .label .label-yellow } [Homework 10](/assets/homework/hw10.pdf)
+    : [LaTeX](/assets/homework/hw10.tex)
 
 Apr 17
 : **Lecture**{: .label .label-green } [Succinct Proofs](/assets/lecture_slides/lec22.pdf)
