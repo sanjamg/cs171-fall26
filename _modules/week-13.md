@@ -10,7 +10,7 @@ Apr 8
 
 Apr 9
 : **Homework**{: .label .label-yellow } [Homework 9](/assets/homework/hw9.pdf)
-    : [Q3 Starter Code](/assets/homework/hw9.zip), [LaTeX](/assets/homework/hw9.tex)
+    : [Q3 Starter Code](/assets/homework/hw9.zip), [LaTeX](/assets/homework/hw9.tex), [Solution](/assets/homework/hw9-sol.pdf)
 
 Apr 10
 : **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](/assets/lecture_slides/lec20.pdf)
