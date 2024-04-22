@@ -6,7 +6,7 @@ Apr 22
 : **Lecture**{: .label .label-green } [Secret Sharing](/assets/lecture_slides/lec23.pdf)
     : Special Topics
 
-: **Discussion**{: .label .label-purple } Discussion 12
+: **Discussion**{: .label .label-purple } [Discussion 12](/assets/discussion/disc12.pdf)
 
 Apr 23
 : **Homework**{: .label .label-yellow } Homework 11
