@@ -7,6 +7,7 @@ Apr 22
     : Special Topics
 
 : **Discussion**{: .label .label-purple } [Discussion 12](/assets/discussion/disc12.pdf)
+    : [Solution](/assets/discussion/disc12-sol.pdf)
 
 Apr 24
 : **Lecture**{: .label .label-green } [TBD](/assets/lecture_slides/lec24.pdf)
