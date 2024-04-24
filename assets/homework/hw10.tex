@@ -108,15 +108,19 @@ We can also prove that $x \in \cL$ without revealing the witness to the verifier
 \noindent\underline{A Zero-Knowledge Protocol for $\cL$:}
 \begin{itemize}
     \item \underline{Inputs:} The prover $P$ takes inputs $(1^\secp, x, w)$ and the verifier $V$ takes inputs $(1^\secp, x)$. $x = (\pp, g^\sfa, g^\sfb, g^\sfc)$, and $w \in \ZZ_q$.
-    \item $P$ samples $\sfx \leftarrow \ZZ_q$, computes $g^\sft = (g^\sfa)^\sfx$, and sends $(g^\sfx,g^{\sft})$ to $V$. Note that $\sft = \sfa \cdot \sfx \mod q$. 
+    \item $P$ samples $\sfx \leftarrow \ZZ_q$, computes $\sft = \sfa \cdot \sfx \mod q$, and sends $(g^\sfx,g^{\sft})$ to $V$. 
     \item $V$ samples $\sfy \leftarrow \mathbb{Z}_q$ and sends $\sfy$ to $P$.
     \item $P$ computes $\sfz = w \cdot \sfy + \sfx$ and sends $\sfz$ to $V$.
-    \item Final step: TBD
+    \item V checks that:
+    \begin{enumerate}
+        \item $g^\sfz = (g^\sfb)^\sfy \cdot g^\sfx$, and 
+        \item $(g^\sfa)^\sfz = (g^{\sfc})^\sfy \cdot g^{\sft}$
+    \end{enumerate}
+    If both checks pass, then the verifier accepts the proof. Otherwise, they reject.
 \end{itemize}
 
 \paragraph{Questions:} 
 \begin{enumerate}
-    \item Fill in the final step to show how $V$ should verify the proof $(g^\sfx,g^{\sft}, \sfy, \sfz)$.
     \item Show that this proof system satisfies completeness and soundness.
     \item Show that this proof system satisfies honest-verifier zero-knowledge.
 \end{enumerate}
@@ -209,6 +213,7 @@ The $d$-discrete-log problem is hard if for any PPT adversary $\A$,
 \end{definition}
 Note that if the $d$-discrete-log problem is hard, then in addition, the regular discrete log problem is hard for $\GG$.
 \pagebreak
+
 
 \section{Course Evaluation (Extra Credit: 2 Points)}
 Complete your course evaluation for this course. You can write as much or as little as you want. Include a screenshot of the submission receipt when you submit this assignment to Gradescope to prove that you've finished your evaluation.\pagebreak
