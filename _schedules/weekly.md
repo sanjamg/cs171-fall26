@@ -57,17 +57,13 @@ schedule:
         start: 4:00 PM
         end: 5:00 PM
         location: Wheeler 224
-      - name: GSI OH
-        start: 4:00 PM
-        end: 7:00 PM
-        location: Cory 540AB
   - name: Thursday
     events:
       - name: Discussion
         start: 4:00 PM
         end: 5:00 PM
         location: Wheeler 224
-      - name: GSI OH (Exception - Does not occur on 4/11)
+      - name: GSI OH
         start: 4:00 PM
         end: 7:00 PM
         location: Cory 504
