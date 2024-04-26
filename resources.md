@@ -16,6 +16,11 @@ description: Past exams and resources.
 - [Fall 2019](/assets/exams/f19_mt2.pdf), [Solution](/assets/exams/f19_mt2_sol.pdf)
 - [Spring 2021](/assets/exams/s21_mt2.pdf), [Solution](/assets/exams/s21_mt2_sol.pdf)
 
+## Final Exam
+
+- [Fall 2019](/assets/exams/f19_final.pdf), [Solution](/assets/exams/f19_final_sol.pdf)
+- [Spring 2021](/assets/exams/s21_final.pdf), [Solution](/assets/exams/s21_final_sol.pdf)
+
 # Proof Workshop
 
 - [Recording](https://drive.google.com/file/d/1PKVq_EuLOAAk7SjuRwsSRbsUC47R6s0k/view?usp=sharing)
