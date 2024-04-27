@@ -11,7 +11,7 @@ Apr 15
 
 Apr 17
 : **Homework**{: .label .label-yellow } [Homework 10](/assets/homework/hw10.pdf)
-    : [LaTeX](/assets/homework/hw10.tex)
+    : [LaTeX](/assets/homework/hw10.tex), [Solution)](/assets/homework/hw10-sol.pdf)
 
 Apr 17
 : **Lecture**{: .label .label-green } [Succinct Proofs](/assets/lecture_slides/lec22.pdf)
