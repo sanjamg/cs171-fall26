@@ -7,4 +7,4 @@ Mar 18
 
 Mar 20
 : **Midterm**{: .label .label-red } [Midterm II](/assets/exams/mt2.pdf) 
-    : [Solution](/assets/exams/mt2_sol.pdf)
+    : [Solution](/assets/exams/mt2_sol.pdf), [Example Answers](/assets/exams/mt2-example-answers.pdf)

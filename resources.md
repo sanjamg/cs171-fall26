@@ -34,4 +34,5 @@ description: Past exams and resources.
 
 # Final Review Session
 
+- [Recording](https://drive.google.com/file/d/1LFN3tDQFO7Hv0cJKrrQGGvr59R5vNK37/view?usp=sharing)
 - [Slides](/assets/resources/CS_171_Final_Review_Session.pdf)
