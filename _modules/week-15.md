@@ -10,7 +10,7 @@ Apr 22
     : [Solution](/assets/discussion/disc12-sol.pdf)
 
 Apr 24
-: **Lecture**{: .label .label-green } [TBD](/assets/lecture_slides/lec24.pdf)
+: **Lecture**{: .label .label-green } [Multiparty computation and review for final exam](/assets/lecture_slides/lec24.pdf)
     : Special Topics
 
 
