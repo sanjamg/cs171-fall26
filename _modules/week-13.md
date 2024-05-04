@@ -14,4 +14,4 @@ Apr 9
 
 Apr 10
 : **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](/assets/lecture_slides/lec20.pdf)
-    : Special Topics
+    : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
