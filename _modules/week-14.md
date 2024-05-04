@@ -4,7 +4,7 @@ title: Week 14
 
 Apr 15
 : **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](/assets/lecture_slides/lec21.pdf)
-    : Special Topics
+    : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
 
 : **Discussion**{: .label .label-purple } [Discussion 11](/assets/discussion/disc11.pdf)
     : [Solution](/assets/discussion/disc11-sol.pdf)
