@@ -56,7 +56,7 @@ defaults:
     values:
       layout: staffer
       height: 300
-      subpath: '/assets/images/'
+      subpath: '/cs171-spring24/assets/images/'
       width: 300
   - scope:
       path: ''
