@@ -2,16 +2,20 @@
 title: Week 12
 ---
 
-Apr 1
-: **Lecture**{: .label .label-green } [Digital signatures. The hash-and-sign paradigm. Schnorr Signature Scheme. Certificates and public-key infrastructures.](assets/lecture_slides/lec17.pdf)
-    : KL 12.1-12.3, 12.5.1 and 12.7
-: **Discussion**{: .label .label-purple } [Discussion 9](assets/discussion/disc9.pdf)
-    : [Solution](assets/discussion/disc9-sol.pdf)
+Nov 10
+: **Lecture**{: .label .label-green } [Commitment Schemes](assets/lecture_slides/lec19.pdf)
+    : Special Topics
+{% comment %}
+: **Discussion**{: .label .label-purple } [Discussion 11](assets/discussion/disc11.pdf)
+    : [Solution](assets/discussion/disc11-sol.pdf)
+{% endcomment %}
 
-Apr 2
-: **Homework**{: .label .label-yellow } [Homework 8](assets/homework/hw8.pdf)
-    : [LaTeX](assets/homework/hw8.tex), [Solution](assets/homework/hw8-sol.pdf)
+{% comment %}
+Nov 11
+: **Homework**{: .label .label-yellow } [Homework 9](assets/homework/hw9.pdf)
+    : [Q3 Starter Code](assets/homework/hw9.zip), [LaTeX](assets/homework/hw9.tex), [Solution](assets/homework/hw9-sol.pdf)
+{% endcomment %}
 
-Apr 3
-: **Lecture**{: .label .label-green }  [Pairings, Identity Based Encryption, CCA Secure Public-Key Encryption](assets/lecture_slides/lec18.pdf)
-    :  [Boneh & Shoup](http://toc.cryptobook.us/book.pdf), Chapter 15
+Nov 12
+: **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](assets/lecture_slides/lec20.pdf)
+    : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)

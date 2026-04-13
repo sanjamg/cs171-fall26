@@ -25,9 +25,10 @@ We encourage DSP students to have their accommodation letters sent to the instru
 
 Please keep the following time slots free for any exam related activities.
 
-*   Midterm I: Feb 14th (During class, Soda 306).
-*   Midterm II: Mar 20th (During class, Soda 306).
-*   Final: May 7th, 2024 (7 pm to 10 pm, Location TBD).
+*   Midterm I: Sep 17th (During class, Soda 306).
+*   Midterm II: Oct 13th (During class, Soda 306).
+*   Midterm III: Nov 5th (During class, Soda 306).
+*   Final: Dec 17th, 2026 (7 pm to 10 pm, Location TBD).
 
 ## Inclusion
 
