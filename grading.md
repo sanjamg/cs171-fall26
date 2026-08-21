@@ -17,11 +17,11 @@ description: >-
 ---
 
 ## Grading
-*   Homeworks (every week) - 20%
-*   Midterm I - 15%
-*   Midterm II - 15%
-*   Midterm III - 15%
-*   Final - 35%
+*   Homeworks and Quizzes - 10%
+*   Midterm I - 20%
+*   Midterm II - 20%
+*   Midterm III - 20%
+*   Final - 30%
 
 We have a full clobber policy for the lowest midterm. Your lowest midterm score will be the max of your current score on your lowest midterm and the z-score of the final mapped to your lowest midterm. Your other two midterms will remain the same.
 
