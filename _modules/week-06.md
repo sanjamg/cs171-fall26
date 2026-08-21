@@ -5,10 +5,6 @@ title: Week 6
 Sep 29
 : **Lecture**{: .label .label-green } [Message integrity and message authentication codes (MACs). Defining security for MACs. Constructing MACs.](assets/lecture_slides/lec9.pdf)
     : KL 4.1, 4.2, 4.3 and 4.4.1
-{% comment %}
-: **Discussion**{: .label .label-purple } Discussion 5 (Midterm I review)
-    : [Midterm 1 Solution](assets/exams/mt1_sol.pdf)
-{% endcomment %}
 
 {% comment %}
 Sep 30
