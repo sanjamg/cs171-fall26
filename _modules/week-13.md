@@ -3,7 +3,7 @@ title: Week 13
 ---
 
 Nov 17
-: **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](assets/lecture_slides/lec21.pdf)
+: **Lecture**{: .label .label-green } Zero-Knowledge Proofs
     : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 12](assets/discussion/disc12.pdf)
@@ -17,5 +17,5 @@ Nov 18
 {% endcomment %}
 
 Nov 19
-: **Lecture**{: .label .label-green } [Succinct Proofs](assets/lecture_slides/lec22.pdf)
+: **Lecture**{: .label .label-green } Succinct Proofs
     : Special Topics

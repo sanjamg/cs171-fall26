@@ -9,5 +9,5 @@ Oct 28
 {% endcomment %}
 
 Oct 29
-: **Lecture**{: .label .label-green } [Digital signatures. The hash-and-sign paradigm. Schnorr Signature Scheme. Certificates and public-key infrastructures.](assets/lecture_slides/lec17.pdf)
+: **Lecture**{: .label .label-green } Digital signatures. The hash-and-sign paradigm. Schnorr Signature Scheme. Certificates and public-key infrastructures.
     : KL 12.1-12.3, 12.5.1 and 12.7
