@@ -3,7 +3,7 @@ title: Week 2
 ---
 
 Sep 1
-: **Lecture**{: .label .label-green } [Principles of Modern Cryptography. Modern cryptography: definitions, assumptions, and proofs. Defining Perfectly Secure Encryption.](assets/lecture_slides/lec2.pdf)
+: **Lecture**{: .label .label-green } Principles of Modern Cryptography. Modern cryptography: definitions, assumptions, and proofs. Defining Perfectly Secure Encryption.
     : KL 1.4 and 2.1
 
 {% comment %}
@@ -18,5 +18,5 @@ Sep 2
 {% endcomment %}
 
 Sep 3
-: **Lecture**{: .label .label-green } [Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.](assets/lecture_slides/lec3.pdf)
+: **Lecture**{: .label .label-green } Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.
     : KL 2.2-2.3, 3.1, and 3.2.1
