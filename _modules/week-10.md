@@ -2,13 +2,6 @@
 title: Week 10
 ---
 
-Oct 27
-: **Lecture**{: .label .label-green } TBD
-{% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 9](assets/discussion/disc9.pdf)
-    : [Solution](assets/discussion/disc9-sol.pdf)
-{% endcomment %}
-
 {% comment %}
 Oct 28
 : **Homework**{: .label .label-yellow } [Homework 8](assets/homework/hw8.pdf)
