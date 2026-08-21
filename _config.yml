@@ -34,9 +34,7 @@ aux_links:
   Gradescope:
     - 'https://www.gradescope.com/courses/1362375'
   Course Calendar:
-    - 'https://calendar.google.com/calendar/embed?src=c_9651c6a31c93fc59d6bb9cbfe39725671c22cc13320176be4e239a60cf5b7be4%40group.calendar.google.com&ctz=America%2FLos_Angeles'
-  Course Capture:
-    - 'https://www.youtube.com/playlist?list=PLnocShPlK-FvBU5thQbLdX-njjoNstExS'
+    - 'https://calendar.google.com/calendar/embed?src=c_88c724eaf1974649af13fe96f12939d2e5f8007e3138367e50ba566c93cf63fc%40group.calendar.google.com&ctz=America%2FLos_Angeles'
   Email:
     - 'mailto:cs171@berkeley.edu'
 

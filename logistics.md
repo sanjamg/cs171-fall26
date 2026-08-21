@@ -22,17 +22,17 @@ description: >-
 *   **Ed**: All course announcements and Q&A happen on [Ed](https://edstem.org/us/courses/102589/discussion).
 *   **Gradescope**: Homework and exams are submitted on [Gradescope](https://www.gradescope.com/courses/1362375) (Course ID: 1362375, Entry Code: **VEG54G**).
 
-## DSP Accomodations
+## DSP Accommodations
 
-We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please send emails to bhaskarr@berkeley.edu for logistics on homework and exam submissions. 
+We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please email the course staff at cs171@berkeley.edu for logistics on homework and exam submissions. 
 
 ## Exam Dates
 
 Please keep the following time slots free for any exam related activities.
 
-*   Midterm I: Sep 17th (During class, Soda 306).
-*   Midterm II: Oct 13th (During class, Soda 306).
-*   Midterm III: Nov 5th (During class, Soda 306).
+*   Midterm I: Sep 17th (During class, Moffitt Library 145).
+*   Midterm II: Oct 13th (During class, Moffitt Library 145).
+*   Midterm III: Nov 5th (During class, Moffitt Library 145).
 *   Final: Dec 17th, 2026 (7 pm to 10 pm, Location TBD).
 
 ## Inclusion
