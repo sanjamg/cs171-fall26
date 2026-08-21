@@ -17,6 +17,11 @@ description: >-
 ---
 
 
+## Course Platforms
+
+*   **Ed**: All course announcements and Q&A happen on [Ed](https://edstem.org/us/courses/102589/discussion).
+*   **Gradescope**: Homework and exams are submitted on [Gradescope](https://www.gradescope.com/courses/1362375) (Course ID: 1362375, Entry Code: **VEG54G**).
+
 ## DSP Accomodations
 
 We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please send emails to bhaskarr@berkeley.edu for logistics on homework and exam submissions. 
