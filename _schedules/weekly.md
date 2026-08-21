@@ -20,52 +20,18 @@ timeline:
   - '5:30 PM'
 schedule:
   - name: Monday
-    events:
-      - name: Lecture
-        start: 11:30 AM
-        end: 1:00 PM
-        location: Soda 306
-      - name: Discussion
-        start: 3:00 PM
-        end: 4:00 PM
-        location: Dwinelle 109
-      - name: Discussion
-        start: 4:00 PM
-        end: 5:00 PM
-        location: Cory 521
-      - name: Discussion
-        start: 5:00 PM
-        end: 6:00 PM
-        location: Cory 521
   - name: Tuesday
     events:
-      - name: Discussion
-        start: 5:00 PM
-        end: 6:00 PM
-        location: Wheeler 200
-  - name: Wednesday
-    events:
       - name: Lecture
-        start: 11:30 AM
-        end: 1:00 PM
-        location: Soda 306
-      - name: Instructor OH
-        start: 1:10 PM
-        end: 2:10 PM
-        location: Soda 685
-      - name: Discussion
-        start: 4:00 PM
-        end: 5:00 PM
-        location: Wheeler 224
+        start: 12:30 PM
+        end: 2:00 PM
+        location: Moffitt Library 145
+  - name: Wednesday
   - name: Thursday
     events:
-      - name: Discussion
-        start: 4:00 PM
-        end: 5:00 PM
-        location: Wheeler 224
-      - name: GSI OH
-        start: 4:00 PM
-        end: 7:00 PM
-        location: Cory 504
+      - name: Lecture
+        start: 12:30 PM
+        end: 2:00 PM
+        location: Moffitt Library 145
   - name: Friday
 ---

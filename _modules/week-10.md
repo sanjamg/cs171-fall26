@@ -3,7 +3,7 @@ title: Week 10
 ---
 
 Oct 27
-: **Lecture**{: .label .label-green } [Review for Midterm II](assets/lecture_slides/lec16.pdf)
+: **Lecture**{: .label .label-green } TBD
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 9](assets/discussion/disc9.pdf)
     : [Solution](assets/discussion/disc9-sol.pdf)
