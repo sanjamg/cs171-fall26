@@ -24,7 +24,7 @@ description: >-
 
 ## DSP Accommodations
 
-We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please email the course staff at cs171@berkeley.edu for logistics on homework and exam submissions. 
+We encourage DSP students to have their accommodation letters sent to the instructor within the first two weeks of class. Additionally, please contact the course staff for logistics on homework and exam submissions. 
 
 ## Exam Dates
 
