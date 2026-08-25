@@ -2,6 +2,9 @@
 title: Week 10
 ---
 
+Oct 27
+: **Lecture**{: .label .label-green } TBD
+
 {% comment %}
 Oct 28
 : **Homework**{: .label .label-yellow } [Homework 8](assets/homework/hw8.pdf)
