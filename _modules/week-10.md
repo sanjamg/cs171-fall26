@@ -9,5 +9,5 @@ Oct 28
 {% endcomment %}
 
 Oct 29
-: **Lecture**{: .label .label-green } Digital signatures. The hash-and-sign paradigm. Schnorr Signature Scheme. Certificates and public-key infrastructures.
-    : KL 12.1-12.3, 12.5.1 and 12.7
+: **Midterm**{: .label .label-red } Midterm II
+{% comment %}    : [Exam](assets/exams/mt2.pdf), [Solution](assets/exams/mt2_sol.pdf), [Example Answers](assets/exams/mt2-example-answers.pdf){% endcomment %}

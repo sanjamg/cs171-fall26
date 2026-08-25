@@ -3,7 +3,7 @@ title: Week 14
 ---
 
 Nov 24
-: **Lecture**{: .label .label-green } Secret Sharing
+: **Lecture**{: .label .label-green } Multiparty computation
     : Special Topics
 
 Nov 26

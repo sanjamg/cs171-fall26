@@ -11,4 +11,5 @@ Nov 3
 {% endcomment %}
 
 Nov 5
-: **Midterm**{: .label .label-red } Midterm III
+: **Lecture**{: .label .label-green } Commitment Schemes
+    : Special Topics

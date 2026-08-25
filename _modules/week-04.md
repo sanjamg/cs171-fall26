@@ -17,5 +17,5 @@ Sep 16
 {% endcomment %}
 
 Sep 17
-: **Midterm**{: .label .label-red } Midterm I
-{% comment %}    : [Exam](assets/exams/mt1.pdf), [Solution](assets/exams/mt1_sol.pdf){% endcomment %}
+: **Lecture**{: .label .label-green } Practical constructions of stream ciphers. Substitution-permutation networks
+    : KL 6.1 and 6.2.1
