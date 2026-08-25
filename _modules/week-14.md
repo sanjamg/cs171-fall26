@@ -7,4 +7,4 @@ Nov 24
     : Special Topics
 
 Nov 26
-: No Class (Thanksgiving)
+: **Holiday**{: .label .label-yellow } No Class — Academic and Administrative Holiday (Thanksgiving)
