@@ -18,12 +18,13 @@ description: >-
 
 ## Grading
 *   Homeworks and Quizzes - 10%
-*   Midterm I - 20%
-*   Midterm II - 20%
-*   Midterm III - 20%
-*   Final - 30%
+*   Midterm I - 25%
+*   Midterm II - 25%
+*   Final - 40%
 
-We have a full clobber policy for the lowest midterm. Your lowest midterm score will be the max of your current score on your lowest midterm and the z-score of the final mapped to your lowest midterm. Your other two midterms will remain the same.
+We have a full clobber policy for the lowest midterm. Your lowest midterm score will be the max of your current score on your lowest midterm and the z-score of the final mapped to your lowest midterm. Your other midterm will remain the same.
+
+**Oral Exams:** We will have an oral exam one week before each midterm, and during the last week of classes (before the final). Homework scores could potentially be normalized based on the oral exams.
 
 ## Late HW Submission
 

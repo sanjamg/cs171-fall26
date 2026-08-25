@@ -30,9 +30,8 @@ We encourage DSP students to have their accommodation letters sent to the instru
 
 Please keep the following time slots free for any exam related activities.
 
-*   Midterm I: Sep 17th (During class, Moffitt Library 145).
-*   Midterm II: Oct 13th (During class, Moffitt Library 145).
-*   Midterm III: Nov 5th (During class, Moffitt Library 145).
+*   Midterm I: Sep 24th (During class, Moffitt Library 145).
+*   Midterm II: Oct 29th (During class, Moffitt Library 145).
 *   Final: Dec 17th, 2026 (7 pm to 10 pm, Location TBD).
 
 ## Inclusion
