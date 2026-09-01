@@ -32,7 +32,7 @@ Please keep the following time slots free for any exam related activities.
 
 *   Midterm I: Sep 24th (During class, Moffitt Library 145).
 *   Midterm II: Oct 29th (During class, Moffitt Library 145).
-*   Final: Dec 17th, 2026 (7 pm to 10 pm, Location TBD).
+*   Final: Dec 18th, 2026 (8 am to 11 am, Location TBD).
 
 ## Inclusion
 
