@@ -12,9 +12,9 @@ Sep 2
     : [Solution](assets/discussion/disc1-sol.pdf)
 {% endcomment %}
 
+Sep 3
+: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf)
 {% comment %}
-Sep 2
-: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw1.pdf)
     : [LaTeX](assets/homework/hw1.tex), [Solution](assets/homework/hw1-sol.pdf)
 {% endcomment %}
 
