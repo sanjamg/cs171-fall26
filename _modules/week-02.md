@@ -6,8 +6,9 @@ Sep 1
 : **Lecture**{: .label .label-green } [Principles of Modern Cryptography: definitions, assumptions, and proofs. Defining perfectly secure encryption; three equivalent definitions of perfect secrecy.](assets/lectures/lec2.pdf)
     : KL 1.4 and 2.1
 
+Sep 2
+: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf)
 {% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/disc1.pdf)
     : [Solution](assets/discussion/disc1-sol.pdf)
 {% endcomment %}
 
