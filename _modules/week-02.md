@@ -19,5 +19,5 @@ Sep 2
 {% endcomment %}
 
 Sep 3
-: **Lecture**{: .label .label-green } Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.
+: **Lecture**{: .label .label-green } [Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.](assets/lectures/lec3.pdf)
     : KL 2.2-2.3, 3.1, and 3.2.1
