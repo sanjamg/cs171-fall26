@@ -17,9 +17,9 @@ description: >-
 ---
 
 ## Grading
-*   Homeworks and Quizzes - 10%
-*   Midterm I - 25%
-*   Midterm II - 25%
+*   Homeworks and Quizzes - 20%
+*   Midterm I - 20%
+*   Midterm II - 20%
 *   Final - 40%
 
 We have a full clobber policy for the lowest midterm. Your lowest midterm score will be the max of your current score on your lowest midterm and the z-score of the final mapped to your lowest midterm. Your other midterm will remain the same.
@@ -46,4 +46,3 @@ Everyone in this class is expected to adhere to this code: “As a member of the
 ## Student Conduct
 
 Ethical conduct is of utmost importance in your education and career. The instructors, the College of Engineering, and U.C. Berkeley are responsible for supporting you by enforcing all students’ compliance with the [Code of Student Conduct](https://sa.berkeley.edu/code-of-conduct) and the policies listed in the [CoE Student Guide](https://engineering.berkeley.edu/students/undergraduate-guide/policies-procedures/). The Center for Student Conduct is set up to support you when you have been affected by actions that may violate these community rules. This includes an organized and transparent process, student participation in the process, mechanisms for appeals, and [other mechanisms to protect fairness](https://sa.berkeley.edu/conduct). 
-
