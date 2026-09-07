@@ -17,7 +17,7 @@ description: >-
 ---
 
 ## Grading
-*   Homeworks and Quizzes - 20%
+*   Homeworks & Oral Exams - 20%
 *   Midterm I - 20%
 *   Midterm II - 20%
 *   Final - 40%
