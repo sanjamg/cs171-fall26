@@ -3,7 +3,7 @@ title: Week 3
 ---
 
 Sep 8
-: **Lecture**{: .label .label-green } Pseudorandomness. The pseudo-OTP. Proofs by reduction, and a proof of security for the pseudo-OTP.
+: **Lecture**{: .label .label-green } [Pseudorandomness. The pseudo-OTP. Proofs by reduction, and a proof of security for the pseudo-OTP.](assets/lectures/lec4.pdf)
     : KL 3.3
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 2](assets/discussion/disc2.pdf)
