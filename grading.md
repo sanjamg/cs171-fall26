@@ -33,6 +33,16 @@ All homeworks will be due at 8:59 PM on the due-date. Please try to submit your 
 *   Late policy: (updated) Assignments submitted late will lose 5% for every hour that they are late. For example: If you submit 1 minute late on an assignment worth 80 points, you lose 4 points (5% of 80). If you submit 61 minutes late, you lose 8 points (10%).
 *   Homework drop policy: Best x-3 (out of x). For example, if 10 homeworks are given then we will score the best 7.
 
+## AI Policy
+
+As the landscape of AI tools continues to evolve, all of us have been figuring out how to best utilize AI as part of our work, including coursework. In order to help set you up for success in this course, we want to offer some advice on how to incorporate the use of AI in a way that supports your learning.
+
+Research has suggested that AI usage negatively impacts exam performance insofar as it results in less time being spent on homework and other coursework. Really, it’s unsurprising: time spent thinking carefully about the material in this course is crucial to developing your own understanding of it! Concretely, when working on homework assignments, we suggest spending at least 15-20 minutes thinking about a given problem before asking AI for assistance—similarly to how in the past we would suggest the same before asking for assistance from other students, TAs at office hours, or the internet.
+
+Spending some time thinking through a problem on your own helps you understand where the limits of your own understanding are and where exactly you’re getting stuck—which will be important to know since you won’t have access to AI to get you unstuck on the exams! But most importantly, doing so will help you incorporate the information you receive from AI or other sources into your own understanding, which you can continue to build on going forward in this course and beyond.
+
+Finally, we want to emphasize that the homework collaboration policy extends to the use of AI. Similarly to when you get help from other students, books, or online resources, you should still write up the solution in your own words. Further, you should cite your use of AI and briefly indicate how you utilized it as a resource. Writing up solutions yourself is important for internalizing the material and checking that you fully understand what you’ve gotten help on, and citing your use of external resources is a crucial component of maintaining academic integrity.
+
 
 ## Collaboration
 
