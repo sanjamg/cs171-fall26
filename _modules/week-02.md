@@ -7,10 +7,7 @@ Sep 1
     : KL 1.4 and 2.1
 
 Sep 2
-: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf)
-{% comment %}
-    : [Solution](assets/discussion/disc1-sol.pdf)
-{% endcomment %}
+: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf) ([solution](assets/discussion/discussion-1-sol.pdf))
 
 Sep 3
 : **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf)
