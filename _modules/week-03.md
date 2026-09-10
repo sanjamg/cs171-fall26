@@ -12,9 +12,9 @@ Sep 8
     : [Solution](assets/discussion/disc2-sol.pdf)
 {% endcomment %}
 
-{% comment %}
 Sep 9
-: **Homework**{: .label .label-yellow } [Homework 2](assets/homework/hw2.pdf)
+: **Homework**{: .label .label-yellow } [Homework 2](assets/homework/hw-2.pdf)
+{% comment %}
     : [Q3 Starter Code](assets/homework/hw2.zip), [LaTeX](assets/homework/hw2.tex), [Note On Negligible Functions](assets/discussion/Negligible-Functions.pdf), [Solution](assets/homework/hw2-sol.pdf)
 {% endcomment %}
 
