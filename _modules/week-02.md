@@ -10,10 +10,7 @@ Sep 2
 : **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf) ([solution](assets/discussion/discussion-1-sol.pdf))
 
 Sep 3
-: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf)
-{% comment %}
-    : [LaTeX](assets/homework/hw1.tex), [Solution](assets/homework/hw1-sol.pdf)
-{% endcomment %}
+: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf) ([LaTeX Template](assets/homework/hw-1.tex))
 
 Sep 3
 : **Lecture**{: .label .label-green } [Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.](assets/lectures/lec3.pdf)
