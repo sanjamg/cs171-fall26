@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Fall 2026}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\Rank}{\mathsf{Rank}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\GF}{\mathsf{GF}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\duedate}{September 17, 2026 at 8:59pm via Gradescope}
+
+\begin{document}
+
+\section*{CS 171: Problem Set 2\\ {\small Due Date: \duedate} }
+
+\subsection*{1. Negligible/Non-negligible functions}
+Let $f, g: \NN \rightarrow [0,1]$ be negligible functions, let $p: \NN \rightarrow \RR$ be a polynomial such that $p(n) > 0$ for all $n\in \NN$. 
+\begin{enumerate}[label=(\alph*)] 
+\item Define $h:\NN \rightarrow \RR$ as $h(n) =f(n)+g(n)$. Prove that $h$ is a negligible function.
+\item Define $h:\NN \rightarrow \RR$ as $h(n) =f(n)\cdot p(n)$. Prove that $h$ is a negligible function.
+\end{enumerate}
+For each function below, either prove that it is negligible or prove that it is non-negligible (all logarithms are base 2).
+\begin{enumerate}[label=(\alph*)] 
+\setcounter{enumi}{2}
+\item $f(n) = n^{-100} + 2^{-n}$
+\item $f(n) = 1.01^{-n}$
+\item $f(n) = 2^{-(\log n)^2}$
+\item $f(n) = e^{-\log^3 n} + e^{-\log^2 n} + e^{-\log n}$
+\end{enumerate}
+
+\subsection*{2. 2-time security?}
+An encryption scheme $(\Gen,\Enc,\Dec)$ over message space $\mathcal{M}$ and ciphertext space $\mathcal{C}$ is said to be 2-time perfectly secure if for any $(m_1,m_2) \in \mathcal{M} \times \mathcal{M}$ and $(m'_1,m'_2) \in \mathcal{M} \times \mathcal{M}$ such that $m_1 \neq m_2$ and $m'_1 \neq m'_2$ and for any $c_1,c_2 \in \mathcal{C}$ the following holds:
+$$
+\Pr[\Enc(K,m_1) = c_1 \wedge \Enc(K,m_2) = c_2] = \Pr[\Enc(K,m'_1) = c_1 \wedge \Enc(K,m'_2) = c_2].
+$$
+Note that in the above definition the key $K$ is the same for encrypting $m_1,m_2$ (resp. $m'_1,m'_2$).
+Consider the following encryption scheme for the message space $\Z_{23}$.
+\begin{itemize}
+    \item $\Gen$: Sample two elements $a \getsr \Z_{23} $ and $b \getsr \Z_{23}$.
+    \item $\Enc((a,b),m):$ Output $c = a\cdot m + b \mod 23$.
+    \item $\Dec((a,b),c):$ Compute $m = (c - b) \cdot a^{-1} \mod 23$ if $a$ is invertible. Otherwise, output error.
+\end{itemize}
+Show the following.
+\begin{enumerate}
+    \item Prove that for any message $m \in \Z_{23}$,
+    $$
+    \Pr[\Dec(K,\Enc(K,m)) = m] = \frac{22}{23}
+    $$
+    \item Prove that this is $2$-time secure.
+\end{enumerate}
+
+\subsection*{3. Pseudorandom Functions}
+Let $f: \bit^n \times \bit^n \rightarrow \bit^n$ be a pseudorandom function (PRF). For the functions $f'$ below, either prove that $f'$ is a PRF (for all choices of $f$), or prove that $f'$ is not a PRF.
+\begin{enumerate}[label=(\alph*)]
+\item $f'_k(x):= f_k(0||x) || f_k(1||x)$.
+\item $f'_k(x):= f_k(0||x) || f_k(x||1)$.
+\end{enumerate}
+
+\subsection*{4. Weak CPA Security}
+Consider a weaker definition of CPA security where in the indistinguishability experiment the adversary $\A$ is not given oracle access to $\Enc_k(\cdot)$ after choosing $m_0, m_1$. That is, $\A$ can only query $\Enc_k(\cdot)$ in phase 1, but not in phase 2. We call this definition weak-CPA-security.
+Prove that weak-CPA-security is equivalent to CPA-security (i.e., Definition 3.22 in the textbook).\\
+
+\noindent\textit{Hint: Begin by showing via a hybrid argument that any $\A$ interacting in the usual CPA game cannot distinguish whether its phase 2 queries are answered honestly (that is, if the response to the query $m$ is $\Enc_k(m)$ or an encryption of $0$; $\Enc_k(0)$ -- something unrelated to $m$).}
+\\
+\end{document}
