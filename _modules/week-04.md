@@ -5,10 +5,7 @@ title: Week 4
 Sep 15
 : **Lecture**{: .label .label-green } [Encryption from stream ciphers and block ciphers. Chosen-Ciphertext Attacks. Hybrid Arguments.](assets/lectures/lec6.pdf)
     : KL 3.6 and 3.7
-{% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 3](assets/discussion/disc3.pdf)
-    : [Solution](assets/discussion/disc3-sol.pdf)
-{% endcomment %}
+: **Discussion**{: .label .label-purple } [Discussion 3](assets/discussion/discussion-3-student.pdf)
 
 {% comment %}
 Sep 16
