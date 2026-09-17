@@ -18,7 +18,7 @@ tagline: Introduction to Cryptography
 description: Introduction to Cryptography course website
 # author: Kevin Lin
 baseurl: '/cs171-fall26' # the subpath of your site, e.g. /blog
-url: 'https://crypto-berkeley.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://sanjamg.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor"]
 favicon_ico: "/assets/images/alice.ico"
 
