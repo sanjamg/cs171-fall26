@@ -7,7 +7,6 @@ Nov 3
     :  [Boneh & Shoup](http://toc.cryptobook.us/book.pdf), Chapter 15
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 10](assets/discussion/disc10.pdf)
-    : [Solution](assets/discussion/disc10-sol.pdf)
 {% endcomment %}
 
 Nov 5

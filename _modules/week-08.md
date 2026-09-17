@@ -7,7 +7,6 @@ Oct 13
     : KL 8.1.1-8.1.2 (self-study), 8.1.3, 8.3.1-8.3.3, 8.4.2, and 10
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 7](assets/discussion/disc7.pdf)
-    : [Solution](assets/discussion/disc7-sol.pdf)
 {% endcomment %}
 
 Oct 15

@@ -10,7 +10,7 @@ Sep 15
 {% comment %}
 Sep 16
 : **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw3.pdf)
-    : [LaTeX](assets/homework/hw3.tex), [Solution](assets/homework/hw3-sol.pdf)
+    : [LaTeX](assets/homework/hw3.tex)
 {% endcomment %}
 
 Sep 17

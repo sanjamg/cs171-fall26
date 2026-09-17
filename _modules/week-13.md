@@ -7,13 +7,12 @@ Nov 17
     : Special Topics
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 12](assets/discussion/disc12.pdf)
-    : [Solution](assets/discussion/disc12-sol.pdf)
 {% endcomment %}
 
 {% comment %}
 Nov 18
 : **Homework**{: .label .label-yellow } [Homework 10](assets/homework/hw10.pdf)
-    : [LaTeX](assets/homework/hw10.tex), [Solution](assets/homework/hw10-sol.pdf)
+    : [LaTeX](assets/homework/hw10.tex)
 {% endcomment %}
 
 Nov 19

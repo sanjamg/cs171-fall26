@@ -7,13 +7,12 @@ Oct 6
     : KL 5.1.1, 5.2, 5.3.1, 5.4.1, and 5.6.1-5.6.3
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 6](assets/discussion/disc6.pdf)
-    : [Solution](assets/discussion/disc6-sol.pdf)
 {% endcomment %}
 
 {% comment %}
 Oct 7
 : **Homework**{: .label .label-yellow } [Homework 5](assets/homework/hw5.pdf)
-    : [LaTeX](assets/homework/hw5.tex), [Solution](assets/homework/hw5-sol.pdf)
+    : [LaTeX](assets/homework/hw5.tex)
 {% endcomment %}
 
 Oct 8

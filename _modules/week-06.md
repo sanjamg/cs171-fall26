@@ -9,7 +9,7 @@ Sep 29
 {% comment %}
 Sep 30
 : **Homework**{: .label .label-yellow } [Homework 4](assets/homework/hw4.pdf)
-    : [LaTeX](assets/homework/hw4.tex), [Solution](assets/homework/hw4-sol.pdf)
+    : [LaTeX](assets/homework/hw4.tex)
 {% endcomment %}
 
 Oct 1
