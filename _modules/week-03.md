@@ -7,7 +7,7 @@ Sep 8
     : KL 3.3
 
 Sep 8
-: **Discussion**{: .label .label-purple } [Discussion 2](assets/discussion/discussion-2.pdf) ([solution](assets/discussion/discussion-2-sol.pdf))
+: **Discussion**{: .label .label-purple } [Discussion 2](assets/discussion/discussion-2.pdf) ([Solution](assets/discussion/discussion-2-sol.pdf))
 
 Sep 9
 : **Homework**{: .label .label-yellow } [Homework 2](assets/homework/hw-2.pdf) ([LaTeX Template](assets/homework/hw-2.tex))

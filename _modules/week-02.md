@@ -7,10 +7,10 @@ Sep 1
     : KL 1.4 and 2.1
 
 Sep 2
-: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf) ([solution](assets/discussion/discussion-1-sol.pdf))
+: **Discussion**{: .label .label-purple } [Discussion 1](assets/discussion/discussion-1.pdf) ([Solution](assets/discussion/discussion-1-sol.pdf))
 
 Sep 3
-: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf) ([LaTeX Template](assets/homework/hw-1.tex))
+: **Homework**{: .label .label-yellow } [Homework 1](assets/homework/hw-1.pdf) ([LaTeX Template](assets/homework/hw-1.tex), [Solution](assets/homework/hw-1-sol.pdf))
 
 Sep 3
 : **Lecture**{: .label .label-green } [Game-Based Definition for Encryption. The one-time pad. Limitations of perfect secrecy. A computational notion of security.](assets/lectures/lec3.pdf)
