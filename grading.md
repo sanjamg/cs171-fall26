@@ -24,7 +24,16 @@ description: >-
 
 We have a full clobber policy for the lowest midterm. Your lowest midterm score will be the max of your current score on your lowest midterm and the z-score of the final mapped to your lowest midterm. Your other midterm will remain the same.
 
-**Oral Exams:** We will have an oral exam one week before each midterm, and during the last week of classes (before the final). Homework scores could potentially be normalized based on the oral exams.
+## Oral Exams
+
+We will have an oral exam one week before each midterm, and during the last week of classes (before the final). Homework scores are adjusted based on the oral exam results as follows:
+
+Adjustments are made in percentage points to each homework score, and each resulting score is capped between 0% and 100%.
+
+*   **Check+:** Add 8 percentage points to both homeworks. For example, scores of 50% and 70% become 58% and 78%.
+*   **Check:** Add 5 percentage points to both homeworks. For example, scores of 50% and 70% become 55% and 75%.
+*   **Check-:** No adjustment.
+*   **No Show:** The first no-show reduces the homework score by 10 percentage points; each subsequent no-show reduces it by 40 percentage points.
 
 ## Late HW Submission
 
