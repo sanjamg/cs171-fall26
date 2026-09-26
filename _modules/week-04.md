@@ -8,7 +8,7 @@ Sep 15
 : **Discussion**{: .label .label-purple } [Discussion 3](assets/discussion/discussion-3-student.pdf)
 
 Sep 16
-: **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw-3.pdf)
+: **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw-3.pdf) ([LaTeX Template](assets/homework/hw-3.tex))
 
 Sep 17
 : **Lecture**{: .label .label-green } [Practical constructions of stream ciphers. Substitution-permutation networks](assets/lectures/lec7.pdf)
