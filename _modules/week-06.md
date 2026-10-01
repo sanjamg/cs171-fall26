@@ -14,5 +14,5 @@ Sep 30
 {% endcomment %}
 
 Oct 1
-: **Lecture**{: .label .label-green } Authenticated encryption and CCA-security.
+: **Lecture**{: .label .label-green } [Authenticated encryption and CCA-security.](assets/lectures/lec10.pdf)
     : KL 4.5.1, and 4.5.2 (no proof), 4.5.3, 4.5.4
