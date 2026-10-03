@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,comment}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage[margin=1.2in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{20pt}
+\fancyhead[L]{\small{CS 171, Fall 2026}}
+\fancyhead[R]{\small{Prof. Sanjam Garg}}
+
+\newcommand{\Gen}{\mathsf{Gen}}
+\newcommand{\Enc}{\mathsf{Enc}}
+\newcommand{\Dec}{\mathsf{Dec}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\bin}{\{0,1\}}
+\newcommand{\bit}{\bin}
+\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\DES}{\mathsf{DES}}
+\newcommand{\mac}{\mathsf{Mac}}
+\newcommand{\verify}{\mathsf{Verify}}
+
+\newcommand{\duedate}{October 10th, 2026 at 8:59pm via \href{https://www.gradescope.com/courses/689970}{Gradescope}}
+
+\begin{document}
+\section*{CS 171: Problem Set 4\\ {\small Due Date: \duedate}}
+
+\subsection*{1. The DES Complementation Property (10 points)}
+
+The DES block cipher is a 16-round Feistel network with a block size of
+64 bits. Its key schedule derives a sequence of 48-bit round keys
+$k_1,\ldots,k_{16}$ from the master key. The details of the key schedule
+are not important for this exercise.
+
+The DES round function $\widehat f$ takes a 48-bit round key
+$k_i\in\bin^{48}$ and a 32-bit input $R\in\bin^{32}$. It is evaluated as
+follows:
+\begin{enumerate}
+    \item The expansion function $E$ expands $R$ to 48 bits by duplicating
+    certain bits of $R$.
+    \item The value $E(R)$ is XORed with $k_i$.
+    \item The resulting 48-bit string is divided into eight 6-bit blocks.
+    Each block is passed through an S-box that maps 6 bits to 4 bits.
+    \item A fixed permutation is applied to the resulting 32-bit string.
+\end{enumerate}
+
+For a bit string $y$, let $\overline y$ denote its bitwise complement.
+Prove that, for every sequence of round keys $k_1,\ldots,k_{16}$ and every
+input $x\in\bin^{64}$,
+\[
+    \DES_{k_1,\ldots,k_{16}}(x)
+    =
+    \overline{\DES_{\overline{k_1},\ldots,\overline{k_{16}}}
+    (\overline{x})}.
+\]
+
+\pagebreak
+
+\subsection*{2. Insecure Candidates for MACs (10 points)}
+
+Two candidate MAC constructions are given below. Both use a pseudorandom
+function $F:\bit^n\times\bit^n\to\bit^n$. Show that each construction is
+insecure.
+
+\begin{enumerate}
+    \item \underline{Scheme 1:}
+    \begin{enumerate}
+        \item $\Gen(1^n)$: Sample $k\getsr\bit^n$ and output $k$.
+        \item $\mac(k,m)$: Parse $m=m_0\mathbin\|m_1$, where
+        $m_0,m_1\in\bit^n$, and output
+        \[
+            t=F(k,m_0)\mathbin\|F(k,m_0\oplus m_1).
+        \]
+        \item $\verify(k,m,t)$: Output $1$ if $t=\mac(k,m)$, and output
+        $0$ otherwise.
+    \end{enumerate}
+
+    \item \underline{Scheme 2:}
+    \begin{enumerate}
+        \item $\Gen(1^n)$: Sample $k\getsr\bit^n$ and output $k$.
+        \item $\mac(k,m)$: Parse $m=m_0\mathbin\|m_1$, where
+        $m_0,m_1\in\bit^{n-1}$. Sample $r\getsr\bit^n$ and output
+        \[
+            t=r\mathbin\|\bigl(F(k,r)\oplus F(k,0\mathbin\|m_0)
+              \oplus F(k,1\mathbin\|m_1)\bigr).
+        \]
+        \item $\verify(k,m,t)$: Parse $m=m_0\mathbin\|m_1$, where
+        $m_0,m_1\in\bit^{n-1}$, and parse $t=r\mathbin\|t'$, where
+        $r,t'\in\bit^n$. Output $1$ if
+        \[
+            t'=F(k,r)\oplus F(k,0\mathbin\|m_0)
+                \oplus F(k,1\mathbin\|m_1),
+        \]
+        and output $0$ otherwise.
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+\subsection*{3. Comparing Numbers Privately (Optional)\footnote{This
+optional exercise is adapted from Dan Boneh's \emph{A Graduate Course in
+Cryptography}.}}
+
+Let $p$ be prime. Alice holds $a\in\mathbb{Z}_p$, and Bob holds
+$b\in\mathbb{Z}_p$. They want Alice to learn whether $a=b$ without
+revealing their numbers to a server, Sam. Assume that Sam follows the
+protocol, does not collude with either party, and has a private channel
+to each of them. All arithmetic below is in $\mathbb{Z}_p$.
+
+For one equality test, Alice and Bob share independent, uniformly random
+keys $k_0,k_1\in\mathbb{Z}_p$. Alice sends
+\[
+    x_a=a+k_0
+\]
+to Sam. Bob chooses $r$ uniformly from $\mathbb{Z}_p$ and sends Sam a pair
+$(r,x_b)$. Sam computes
+\[
+    x=rx_a-x_b
+\]
+and sends $x$ to Alice. Alice concludes that $a=b$ if $x+k_1=0$.
+
+\begin{enumerate}
+    \item Determine how Bob should compute $x_b$ from
+    $b,r,k_0,k_1$. Show that Alice's test is always correct when $a=b$,
+    and find its error probability when $a\ne b$. Explain why Sam's view
+    reveals nothing about $a$ or $b$. Explain why, when $a\ne b$, the
+    value $x+k_1$ reveals nothing about $b$ to Alice.
+
+    \item Suppose Alice and Bob use the same pair $(k_0,k_1)$ for two
+    tests: one on inputs $(a,b)$ and another on inputs $(a',b')$. Bob
+    chooses fresh, independent values $r$ and $r'$ for the two tests.
+    Show what goes wrong with privacy when the keys are reused.
+
+    \item Part 2 shows that Alice and Bob need a fresh key pair for every
+    test. Rather than sharing many independent key pairs in advance,
+    let $B=B(n)$ be a polynomial and suppose that they share a single
+    long-term key $K\in\{0,1\}^n$ for a secure pseudorandom function
+    \[
+        F:\{0,1\}^n\times\{0,1\}^n\longrightarrow
+        \mathbb{Z}_p^2.
+    \]
+    Design a protocol for up to $B(n)$ equality tests, and briefly
+    justify why the resulting tests have the privacy properties of the
+    one-time protocol.
+\end{enumerate}
+
+\end{document}

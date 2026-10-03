@@ -9,12 +9,6 @@ Sep 22
 : **Discussion**{: .label .label-purple } [Discussion 4](assets/discussion/disc4.pdf)
 {% endcomment %}
 
-{% comment %}
-Sep 23
-: **Homework**{: .label .label-yellow } [Homework 4](assets/homework/hw4.pdf)
-    : [LaTeX](assets/homework/hw4.tex)
-{% endcomment %}
-
 Sep 24
 : **Midterm**{: .label .label-red } Midterm I
 {% comment %}    : [Exam](assets/exams/mt1.pdf){% endcomment %}

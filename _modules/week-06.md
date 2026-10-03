@@ -16,3 +16,6 @@ Sep 30
 Oct 1
 : **Lecture**{: .label .label-green } [Authenticated encryption and CCA-security.](assets/lectures/lec10.pdf)
     : KL 4.5.1, and 4.5.2 (no proof), 4.5.3, 4.5.4
+
+Oct 3
+: **Homework**{: .label .label-yellow } [Homework 4](assets/homework/hw-4.pdf) ([LaTeX Template](assets/homework/hw-4.tex))
