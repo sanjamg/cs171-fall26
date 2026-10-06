@@ -3,7 +3,7 @@ title: Week 7
 ---
 
 Oct 6
-: **Lecture**{: .label .label-green } Hash functions and collision resistance. Birthday attacks on hash functions. Additional applications of hash functions.
+: **Lecture**{: .label .label-green } [Hash functions and collision resistance. Birthday attacks on hash functions. Additional applications of hash functions.](assets/lectures/lec11.pdf)
     : KL 5.1.1, 5.2, 5.3.1, 5.4.1, and 5.6.1-5.6.3
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 6](assets/discussion/disc6.pdf)
