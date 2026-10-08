@@ -14,5 +14,5 @@ Oct 7
 {% endcomment %}
 
 Oct 8
-: **Lecture**{: .label .label-green } One-Way Functions and Implications
+: **Lecture**{: .label .label-green } [One-Way Functions and Implications](assets/lectures/lec12.pdf)
     : KL 7.1, 7.2, 7.3.1, 7.4, 7.5, and 7.7 
