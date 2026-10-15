@@ -10,8 +10,7 @@ Sep 22
 {% endcomment %}
 
 Sep 24
-: **Midterm**{: .label .label-red } Midterm I
-{% comment %}    : [Exam](assets/exams/mt1.pdf){% endcomment %}
+: **Midterm**{: .label .label-red } [Midterm I](assets/exams/midterm-1-2026.pdf)
 
 Sep 26
 : **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw-3.pdf) ([LaTeX Template](assets/homework/hw-3.tex))
