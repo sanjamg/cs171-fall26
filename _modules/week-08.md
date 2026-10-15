@@ -9,5 +9,5 @@ Oct 13
 
 
 Oct 15
-: **Lecture**{: .label .label-green } Public-key encryption: syntax and definitions of security. El Gamal encryption. Definitions of security for public-key encryption.
+: **Lecture**{: .label .label-green } [Public-key encryption: syntax and definitions of security. El Gamal encryption. Definitions of security for public-key encryption.](assets/lectures/lec14.pdf)
     : KL 11.1 11.2, 11.4.1, and 11.4.4 (only the discussion that El Gamal encryption is malleable).
