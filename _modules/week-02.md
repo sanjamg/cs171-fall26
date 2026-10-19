@@ -3,7 +3,7 @@ title: Week 2
 ---
 
 Sep 1
-: **Lecture**{: .label .label-green } [Principles of Modern Cryptography: definitions, assumptions, and proofs. Defining perfectly secure encryption; three equivalent definitions of perfect secrecy.](assets/lectures/lec2.pdf)
+: **Lecture**{: .label .label-green } [Historical ciphers and their cryptanalysis: substitution and Vigenère ciphers. Principles of Modern Cryptography: definitions, assumptions, and proofs. Defining perfectly secure encryption; three equivalent definitions of perfect secrecy.](assets/lectures/lec2.pdf)
     : KL 1.4 and 2.1
 
 Sep 2
