@@ -14,5 +14,5 @@ Oct 21
 {% endcomment %}
 
 Oct 22
-: **Lecture**{: .label .label-green } Digital signatures. Certificates and public-key infrastructures. Textbook RSA signatures and their insecurity. The hash-and-sign paradigm. Identification schemes: the Schnorr identification scheme.
+: **Lecture**{: .label .label-green } [Digital signatures. Certificates and public-key infrastructures. Textbook RSA signatures and their insecurity. The hash-and-sign paradigm. Identification schemes: the Schnorr identification scheme.](assets/lectures/lec16.pdf)
     : KL 12.1-12.3, 12.4.1, 12.5.1, and 12.7
