@@ -3,7 +3,7 @@ title: Week 10
 ---
 
 Oct 27
-: **Lecture**{: .label .label-green } The random-oracle model. RSA-FDH signatures. The Fiat-Shamir transform and Schnorr signatures.
+: **Lecture**{: .label .label-green } [The random-oracle model. RSA-FDH signatures. The Fiat-Shamir transform and Schnorr signatures.](assets/lectures/lec17.pdf)
     : KL 5.5, 12.4.2, and 12.5.2; Joy of Cryptography, [Ch. 12](https://joyofcryptography.com/ro/) and [Ch. 16](https://joyofcryptography.com/sig/)
 
 {% comment %}
