@@ -18,4 +18,4 @@ Oct 1
     : KL 4.5.1, and 4.5.2 (no proof), 4.5.3, 4.5.4
 
 Oct 3
-: **Homework**{: .label .label-yellow } [Homework 4](assets/homework/hw-4.pdf) ([LaTeX Template](assets/homework/hw-4.tex))
+: **Homework**{: .label .label-yellow } [Homework 4](assets/homework/hw-4.pdf) ([LaTeX Template](assets/homework/hw-4.tex), [Solution](assets/homework/hw-4-sol.pdf))

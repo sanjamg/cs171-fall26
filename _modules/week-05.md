@@ -13,4 +13,4 @@ Sep 24
 : **Midterm**{: .label .label-red } [Midterm I](assets/exams/midterm-1-2026.pdf)
 
 Sep 26
-: **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw-3.pdf) ([LaTeX Template](assets/homework/hw-3.tex))
+: **Homework**{: .label .label-yellow } [Homework 3](assets/homework/hw-3.pdf) ([LaTeX Template](assets/homework/hw-3.tex), [Solution](assets/homework/hw-3-sol.pdf))
