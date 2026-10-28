@@ -12,4 +12,4 @@ Oct 8
     : KL 7.1, 7.2, 7.3.1, 7.4, 7.5, and 7.7 
 
 Oct 9
-: **Homework**{: .label .label-yellow } [Homework 5](assets/homework/hw-5.pdf) ([LaTeX Template](assets/homework/hw-5.tex))
+: **Homework**{: .label .label-yellow } [Homework 5](assets/homework/hw-5.pdf) ([LaTeX Template](assets/homework/hw-5.tex), [Solution](assets/homework/hw-5-sol.pdf))
