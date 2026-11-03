@@ -3,8 +3,8 @@ title: Week 13
 ---
 
 Nov 17
-: **Lecture**{: .label .label-green } Succinct Proofs
-    : Special Topics
+: **Lecture**{: .label .label-green } Zero-Knowledge Proofs
+    : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
 {% comment %}
 : **Discussion**{: .label .label-purple } [Discussion 12](assets/discussion/disc12.pdf)
 {% endcomment %}
@@ -16,5 +16,5 @@ Nov 18
 {% endcomment %}
 
 Nov 19
-: **Lecture**{: .label .label-green } Secret Sharing
+: **Lecture**{: .label .label-green } Succinct Proofs
     : Special Topics

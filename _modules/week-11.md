@@ -10,5 +10,5 @@ Nov 3
 {% endcomment %}
 
 Nov 5
-: **Lecture**{: .label .label-green } Commitment Schemes
-    : Special Topics
+: **Lecture**{: .label .label-green } Secure Messaging
+    : [Joy of Cryptography](https://joyofcryptography.com/msg/)
