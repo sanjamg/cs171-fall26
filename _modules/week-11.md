@@ -5,9 +5,7 @@ title: Week 11
 Nov 3
 : **Lecture**{: .label .label-green } [Pairings, Identity Based Encryption, CCA Secure Public-Key Encryption](assets/lectures/lec18.pdf)
     :  [Boneh & Shoup](http://toc.cryptobook.us/book.pdf), Chapter 15
-{% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 10](assets/discussion/disc10.pdf)
-{% endcomment %}
+: **Discussion**{: .label .label-purple } [Discussion 8](assets/discussion/discussion-8-student.pdf) ([Solution](assets/discussion/discussion-8-sol.pdf))
 
 Nov 5
 : **Lecture**{: .label .label-green } Secure Messaging
