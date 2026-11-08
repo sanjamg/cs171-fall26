@@ -10,3 +10,6 @@ Nov 3
 Nov 5
 : **Lecture**{: .label .label-green } Secure Messaging
     : [Joy of Cryptography](https://joyofcryptography.com/msg/)
+
+Nov 7
+: **Homework**{: .label .label-yellow } [Homework 7](assets/homework/hw7.pdf) ([LaTeX Template](assets/homework/hw7.tex))

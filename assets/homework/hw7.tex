@@ -1,114 +1,138 @@
 \documentclass[11pt]{article}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{enumerate,comment}
-\usepackage{url}
-\usepackage{color}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
 \usepackage[margin=1.2in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 \pagestyle{fancy}
 \setlength{\headheight}{20pt}
 \setlength{\headsep}{20pt}
-\fancyhead[L]{\small{CS 171, Spring 2024}}
+\fancyhead[L]{\small{CS 171, Fall 2026}}
 \fancyhead[R]{\small{Prof. Sanjam Garg}}
-
-\newcommand\custombox[2]{%%
-    \fbox{\rule{#1}{0pt}\rule[-0.5ex]{0pt}{#2}}}
-
-\newcommand\answerbox{%%
-    \fbox{\rule{1in}{0pt}\rule[-0.5ex]{0pt}{4ex}}}
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{fact}[theorem]{Fact}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{remark}[theorem]{Remark}
-\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
-\numberwithin{equation}{section}
 
 \newcommand{\Gen}{\mathsf{Gen}}
 \newcommand{\Enc}{\mathsf{Enc}}
 \newcommand{\Dec}{\mathsf{Dec}}
-\newcommand{\gen}{\mathsf{Gen}}
-\newcommand{\enc}{\mathsf{Enc}}
-\newcommand{\dec}{\mathsf{Dec}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\cM}{\mathcal{M}}
-\newcommand{\cC}{\mathcal{C}}
-\newcommand{\cK}{\mathcal{K}}
-\newcommand{\Rank}{\mathsf{Rank}}
-\newcommand{\F}{\mathbb{F}}
-\newcommand{\getsr}{\stackrel{\$}{\gets}}
+\newcommand{\Sign}{\mathsf{Sign}}
+\newcommand{\Verify}{\mathsf{Verify}}
+\newcommand{\Setup}{\mathsf{Setup}}
+\newcommand{\KeyGen}{\mathsf{KeyGen}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\bit}{\{0,1\}}
 \newcommand{\A}{\mathcal{A}}
-\newcommand{\D}{\mathcal{D}}
-\newcommand{\G}{\mathbb{G}}
-\renewcommand{\H}{\mathcal{H}}
-\newcommand{\GF}{\mathsf{GF}}
-\newcommand{\negl}{\mathsf{negl}}
-\newcommand{\nonnegl}{\mathsf{non}\text{-}\mathsf{negl}}
-\newcommand{\msg}{\mathsf{msg}}
-\newcommand{\st}{\mathsf{st}}
-
-\newcommand{\adv}{\A}
-
-\newcommand{\hyb}{\mathsf{Hyb}}
-
-\newcommand{\bin}{\{0,1\}}
-\newcommand{\bit}{\bin}
 \newcommand{\B}{\mathcal{B}}
-\newcommand{\duedate}{March 18th, 2024 at 8:59pm via Gradescope. No late submissions will be accepted.}
-
-
-\newcommand{\MAC}{\mathsf{MAC}}
-\newcommand{\gen}{\mathsf{Gen}}
-\newcommand{\mac}{\mathsf{Mac}}
-\newcommand{\verify}{\mathsf{Verify}}
-\newcommand{\C}{\mathcal{C}}
-
-\newenvironment{solution}{\color{blue}\noindent{\bf Solution}\hspace*{1em}}{\qed\medskip}
-
+\newcommand{\negl}{\mathsf{negl}}
+\newcommand{\duedate}{Saturday, November 14, 2026 at 8:59 PM via Gradescope}
 
 \begin{document}
-\section*{CS 171: Problem Set 7\\ {\small Due Date: \duedate} }
+\section*{CS 171: Problem Set 7\\ {\small Due Date: \duedate}}
 
+\section{Digital Signatures from Bilinear Maps (10 points)}
+Let $(\GG,\GG_T,q,g,e)$ be bilinear-group parameters, where $\GG$ and
+$\GG_T$ have prime order $q$, $g$ generates $\GG$, and
+$e:\GG\times\GG\to\GG_T$ is an efficiently computable, nondegenerate
+bilinear map. Let $H:\GG\to\GG$ be a random oracle.
 
-\section{PRGs Imply OWFs (5 points)}
-We saw in lecture 12 that one-way functions (OWFs) can be used to construct pseudorandom generators (PRGs). Additionally, it turns out that PRGs can be used to construct OWFs. This means that the assumption that OWFs exist is equally strong as the assumption that PRGs exist.
+Consider the following signature scheme with message space $\GG$:
+\begin{itemize}
+    \item $\Gen(1^n)$: Generate the bilinear-group parameters, sample
+    $x\leftarrow\ZZ_q$, and set $h=g^x$. Output
+    $pk=((\GG,\GG_T,q,g,e),h)$ and $sk=((\GG,\GG_T,q,g,e),x)$.
+    \item $\Sign(sk,m)$: Output $\sigma=H(m)^x$.
+    \item $\Verify(pk,m,\sigma)$: To be completed.
+\end{itemize}
 
-\paragraph{Question: } Let $G: \{0,1\}^{n/2} \to \{0,1\}^n$ be a PRG. Prove that $G$ is also a OWF.\\
-
-\begin{solution}
-
-\end{solution}
-
-\pagebreak
-
-\section{A Candidate Key-Exchange Protocol (5 points)}
-Consider the following proposal for a key exchange protocol:
-\begin{enumerate}
-\item Alice samples $k \leftarrow \bit^n$ and $r \leftarrow \bit^n$, and sends Bob the following: 
-\[s := k \oplus r\]
-\item Bob samples $t \leftarrow \bit^n$, and sends Alice the following: 
-\[u := s \oplus t\]
-\item Alice sends Bob the following: 
-\[w := u \oplus r\]
-\item Alice outputs $k$ and Bob outputs $w \oplus t$.
-\end{enumerate}
-
-\paragraph{Questions:}
+\paragraph{Correctness.}
+For every key pair $(pk,sk)$ output by $\Gen(1^n)$ and every message
+$m\in\GG$, the honestly generated signature must be accepted:
+\[
+    \Verify(pk,m,H(m)^x)=1,
+\]
+where $x$ is the secret exponent in $sk$.
 
 \begin{enumerate}[(a)]
-    \item \emph{Correctness:} Show that Alice and Bob will always output the same key $k$.
-    \item \emph{Security:} Does this scheme satisfy key-exchange security\footnote{Key-exchange security is also known as $\mathsf{KE}^{\mathsf{eav}}_{\A,\Pi}$ security. It was defined in lecture 13, slide 26, as well as in Katz \& Lindell, 3rd Edition, Definition 11.1.}? Prove your answer.
-\end{enumerate}$ $
+    \item \textbf{(3 points)} Give a verification algorithm using the
+    bilinear map.
+    \item \textbf{(3 points)} Prove that your algorithm satisfies
+    correctness as defined above.
+    \item \textbf{(4 points)} Suppose we replace the random oracle by the
+    identity function, so that $H(m)=m$ for every $m\in\GG$.
+    Prove that with this modification, the signature scheme is insecure.
+\end{enumerate}
 
-\begin{solution}
-    
-\end{solution}
+
+\newpage
+\section{CCA2-Secure Public-Key Encryption from IBE (15 points)}
+Let $\Pi_{\mathrm{IBE}}=(\Setup,\KeyGen,E,D)$ be a CPA-secure IBE
+scheme. Recall that its adversary may obtain secret keys for any identities
+except the challenge identity, both before and after the challenge.
+Let $\Sigma=(\Gen_{\mathrm{sig}},\Sign,\Verify)$ be a
+\emph{strongly unforgeable one-time} signature scheme.
+The IBE identity space includes encodings of signature verification keys,
+and the signature scheme can sign IBE ciphertexts.
+
+Next we recall the definitions of unforgeability and strong unforgeability
+for $\Sigma$.
+In both security experiments, the challenger samples
+$(vk,ssk)\leftarrow\Gen_{\mathrm{sig}}(1^n)$ and gives a PPT adversary
+$vk$ and access to the signing oracle $\Sign(ssk,\cdot)$.
+Let $Q$ be the set of messages it queries and $T$ the set of
+message--signature pairs returned by the oracle.
+\begin{itemize}
+    \item \textbf{Ordinary unforgeability:} The adversary wins by outputting
+    $(c',\sigma')$ satisfying
+    \[
+        \Verify(vk,c',\sigma')=1\quad\text{and}\quad c'\notin Q.
+    \]
+    \item \textbf{Strong unforgeability:} The adversary wins by outputting
+    $(c',\sigma')$ satisfying
+    \[
+        \Verify(vk,c',\sigma')=1\quad\text{and}\quad(c',\sigma')\notin T.
+    \]
+    The message may have been signed before,
+    but the pair must be new; replaying an exact pair does not count.
+\end{itemize}
+Each notion requires that every PPT adversary wins with negligible
+probability. \textbf{One-time} security restricts the adversary to
+\emph{at most one signing-oracle query} under $vk$. Verification is public
+and is not subject to this restriction. Thus, after receiving $\sigma$
+on its sole query $c$, a one-time strong forgery is any accepting pair
+$(c',\sigma')\ne(c,\sigma)$, including $c'=c$ with $\sigma'\ne\sigma$.
+With no signing queries, any accepting pair is a forgery.
+
+Consider the following construction of an encryption scheme using $\Sigma$:
+\begin{itemize}
+    \item $\Gen(1^n)$: Sample $(mpk,msk)\leftarrow\Setup(1^n)$.
+    Output $pk=mpk$ and $sk=msk$.
+    \item $\Enc(mpk,m)$: Generate a fresh signature key pair
+    $(vk,ssk)\leftarrow\Gen_{\mathrm{sig}}(1^n)$, compute
+    \[
+        c\leftarrow E(mpk,vk,m),\qquad
+        \sigma\leftarrow\Sign(ssk,c),
+    \]
+    and output $C=(vk,c,\sigma)$.
+    \item $\Dec(msk,(vk,c,\sigma))$: If
+    $\Verify(vk,c,\sigma)=0$, output $\bot$. Otherwise output
+    \[
+        D(\KeyGen(msk,vk),c).
+    \]
+\end{itemize}
+
+\begin{enumerate}[(a)]
+    \item \textbf{(3 points)} Prove correctness of the encryption scheme.
+    \item \textbf{(8 points)} Prove that the construction is CCA2-secure.
+    Give a reduction to IBE security.
+    Explain why \emph{one-time} strong unforgeability suffices.
+    \item \textbf{(4 points)} Show that ordinary unforgeability is
+    insufficient in general. Starting from a secure signature scheme,
+    construct an ordinarily unforgeable signature scheme that makes the
+    above encryption scheme fail CCA2 security. Give the decryption query
+    that breaks it.
+\end{enumerate}
+
 
 \end{document}
