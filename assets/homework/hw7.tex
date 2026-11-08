@@ -14,124 +14,97 @@
 \fancyhead[R]{\small{Prof. Sanjam Garg}}
 
 \newcommand{\Gen}{\mathsf{Gen}}
-\newcommand{\Enc}{\mathsf{Enc}}
-\newcommand{\Dec}{\mathsf{Dec}}
 \newcommand{\Sign}{\mathsf{Sign}}
 \newcommand{\Verify}{\mathsf{Verify}}
-\newcommand{\Setup}{\mathsf{Setup}}
-\newcommand{\KeyGen}{\mathsf{KeyGen}}
 \newcommand{\GG}{\mathbb{G}}
 \newcommand{\ZZ}{\mathbb{Z}}
-\newcommand{\bit}{\{0,1\}}
 \newcommand{\A}{\mathcal{A}}
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\D}{\mathcal{D}}
 \newcommand{\negl}{\mathsf{negl}}
 \newcommand{\duedate}{Saturday, November 14, 2026 at 8:59 PM via Gradescope}
+
 
 \begin{document}
 \section*{CS 171: Problem Set 7\\ {\small Due Date: \duedate}}
 
-\section{Digital Signatures from Bilinear Maps (10 points)}
+\section{Aggregate Signatures (15 points)}
 Let $(\GG,\GG_T,q,g,e)$ be bilinear-group parameters, where $\GG$ and
 $\GG_T$ have prime order $q$, $g$ generates $\GG$, and
 $e:\GG\times\GG\to\GG_T$ is an efficiently computable, nondegenerate
-bilinear map. Let $H:\GG\to\GG$ be a random oracle.
+bilinear map. Let $H:\{0,1\}^*\to\GG$ be a random oracle.
+All users share these parameters and $H$.
 
-Consider the following signature scheme with message space $\GG$:
+Consider the following signature scheme $\Sigma=(\Gen,\Sign,\Verify)$:
 \begin{itemize}
-    \item $\Gen(1^n)$: Generate the bilinear-group parameters, sample
-    $x\leftarrow\ZZ_q$, and set $h=g^x$. Output
-    $pk=((\GG,\GG_T,q,g,e),h)$ and $sk=((\GG,\GG_T,q,g,e),x)$.
-    \item $\Sign(sk,m)$: Output $\sigma=H(m)^x$.
-    \item $\Verify(pk,m,\sigma)$: To be completed.
+    \item $\Gen(1^n)$: Sample $x\leftarrow\ZZ_q$ and output
+    $pk=h=g^x$ and $sk=x$.
+    \item $\Sign(x,m)$: Output $\sigma=H(m)^x$.
+    \item $\Verify(h,m,\sigma)$: Accept if $\sigma\in\GG$ and
+    $e(g,\sigma)=e(h,H(m))$; otherwise reject.
 \end{itemize}
+Assume that $\Sigma$ is existentially unforgeable under chosen-message
+attacks.
 
-\paragraph{Correctness.}
-For every key pair $(pk,sk)$ output by $\Gen(1^n)$ and every message
-$m\in\GG$, the honestly generated signature must be accepted:
+Alice and Bob have public keys $h_A=g^a$ and $h_B=g^b$. They sign the
+same message $m$, producing $\sigma_A=H(m)^a$ and $\sigma_B=H(m)^b$.
+Their \emph{aggregate signature} is the single group element
 \[
-    \Verify(pk,m,H(m)^x)=1,
+    \sigma=\sigma_A\sigma_B.
 \]
-where $x$ is the secret exponent in $sk$.
 
 \begin{enumerate}[(a)]
-    \item \textbf{(3 points)} Give a verification algorithm using the
-    bilinear map.
-    \item \textbf{(3 points)} Prove that your algorithm satisfies
-    correctness as defined above.
-    \item \textbf{(4 points)} Suppose we replace the random oracle by the
-    identity function, so that $H(m)=m$ for every $m\in\GG$.
-    Prove that with this modification, the signature scheme is insecure.
+    \item \textbf{(4 points)} Give a verification algorithm for an
+    aggregate signature, given $h_A,h_B,m,\sigma$, using two evaluations
+    of the bilinear map. Prove correctness.
+
+    \item \textbf{(7 points)} Suppose Alice's and Bob's key pairs are
+    generated honestly and independently. An adversary receives
+    $h_A,h_B$ and Bob's secret key $b$, and may query Alice's signing
+    oracle. It wins if it outputs an accepted aggregate signature on a
+    message that it never queried to Alice's signing oracle.
+    Prove that every PPT adversary wins with negligible probability.
+    Give a reduction to the unforgeability of $\Sigma$.
+
+    \item \textbf{(4 points)} Now suppose the adversary may choose
+    $h_B\in\GG$ after receiving Alice's public key $h_A$, without
+    providing the corresponding secret key. Prove that with this
+    modification, the aggregate signature scheme is insecure.
 \end{enumerate}
 
 
 \newpage
-\section{CCA2-Secure Public-Key Encryption from IBE (15 points)}
-Let $\Pi_{\mathrm{IBE}}=(\Setup,\KeyGen,E,D)$ be a CPA-secure IBE
-scheme. Recall that its adversary may obtain secret keys for any identities
-except the challenge identity, both before and after the challenge.
-Let $\Sigma=(\Gen_{\mathrm{sig}},\Sign,\Verify)$ be a
-\emph{strongly unforgeable one-time} signature scheme.
-The IBE identity space includes encodings of signature verification keys,
-and the signature scheme can sign IBE ciphertexts.
-
-Next we recall the definitions of unforgeability and strong unforgeability
-for $\Sigma$.
-In both security experiments, the challenger samples
-$(vk,ssk)\leftarrow\Gen_{\mathrm{sig}}(1^n)$ and gives a PPT adversary
-$vk$ and access to the signing oracle $\Sign(ssk,\cdot)$.
-Let $Q$ be the set of messages it queries and $T$ the set of
-message--signature pairs returned by the oracle.
-\begin{itemize}
-    \item \textbf{Ordinary unforgeability:} The adversary wins by outputting
-    $(c',\sigma')$ satisfying
-    \[
-        \Verify(vk,c',\sigma')=1\quad\text{and}\quad c'\notin Q.
-    \]
-    \item \textbf{Strong unforgeability:} The adversary wins by outputting
-    $(c',\sigma')$ satisfying
-    \[
-        \Verify(vk,c',\sigma')=1\quad\text{and}\quad(c',\sigma')\notin T.
-    \]
-    The message may have been signed before,
-    but the pair must be new; replaying an exact pair does not count.
-\end{itemize}
-Each notion requires that every PPT adversary wins with negligible
-probability. \textbf{One-time} security restricts the adversary to
-\emph{at most one signing-oracle query} under $vk$. Verification is public
-and is not subject to this restriction. Thus, after receiving $\sigma$
-on its sole query $c$, a one-time strong forgery is any accepting pair
-$(c',\sigma')\ne(c,\sigma)$, including $c'=c$ with $\sigma'\ne\sigma$.
-With no signing queries, any accepting pair is a forgery.
-
-Consider the following construction of an encryption scheme using $\Sigma$:
-\begin{itemize}
-    \item $\Gen(1^n)$: Sample $(mpk,msk)\leftarrow\Setup(1^n)$.
-    Output $pk=mpk$ and $sk=msk$.
-    \item $\Enc(mpk,m)$: Generate a fresh signature key pair
-    $(vk,ssk)\leftarrow\Gen_{\mathrm{sig}}(1^n)$, compute
-    \[
-        c\leftarrow E(mpk,vk,m),\qquad
-        \sigma\leftarrow\Sign(ssk,c),
-    \]
-    and output $C=(vk,c,\sigma)$.
-    \item $\Dec(msk,(vk,c,\sigma))$: If
-    $\Verify(vk,c,\sigma)=0$, output $\bot$. Otherwise output
-    \[
-        D(\KeyGen(msk,vk),c).
-    \]
-\end{itemize}
+\section{Key Exposure in a Diffie--Hellman Ratchet (15 points)}
+Let $\GG$ be a cyclic group of prime order $q$ with generator $g$, in
+which the DDH assumption holds. Consider five successive public values
+in a Diffie--Hellman ratchet:
+\[
+    A_1=g^{a_1},\quad A_2=g^{a_2},\quad A_3=g^{a_3},\quad
+    A_4=g^{a_4},\quad A_5=g^{a_5},
+\]
+where $a_1,\ldots,a_5\leftarrow\ZZ_q$ are independent and uniform.
+The four successive keys are
+\[
+    K_{12}=g^{a_1a_2},\qquad K_{23}=g^{a_2a_3},\qquad
+    K_{34}=g^{a_3a_4},\qquad K_{45}=g^{a_4a_5}.
+\]
+A passive adversary records all five public values and later learns
+$a_3$. No other exponents or stored keys are exposed.
 
 \begin{enumerate}[(a)]
-    \item \textbf{(3 points)} Prove correctness of the encryption scheme.
-    \item \textbf{(8 points)} Prove that the construction is CCA2-secure.
-    Give a reduction to IBE security.
-    Explain why \emph{one-time} strong unforgeability suffices.
-    \item \textbf{(4 points)} Show that ordinary unforgeability is
-    insufficient in general. Starting from a secure signature scheme,
-    construct an ordinarily unforgeable signature scheme that makes the
-    above encryption scheme fail CCA2 security. Give the decryption query
-    that breaks it.
+    \item \textbf{(5 points)} Which of the four keys can the adversary
+    compute? Give explicit computations for the exposed keys.
+
+    \item \textbf{(10 points)} Let
+    \[
+        V=(A_1,A_2,A_3,A_4,A_5,a_3,K_{23},K_{34}).
+    \]
+    Prove that
+    \[
+        (V,K_{12},K_{45})\;\approx_c\;(V,U_1,U_2),
+    \]
+    where $U_1,U_2$ are independent uniform elements of $\GG$, independent
+    of $V$. Give a reduction to DDH.
 \end{enumerate}
 
 
