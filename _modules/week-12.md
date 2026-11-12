@@ -16,5 +16,5 @@ Nov 11
 {% endcomment %}
 
 Nov 12
-: **Lecture**{: .label .label-green } Zero-Knowledge Proofs
+: **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](assets/lectures/lec21.pdf)
     : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
