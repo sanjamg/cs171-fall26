@@ -8,7 +8,7 @@ Nov 3
 : **Discussion**{: .label .label-purple } [Discussion 8](assets/discussion/discussion-8-student.pdf) ([Solution](assets/discussion/discussion-8-sol.pdf))
 
 Nov 5
-: **Lecture**{: .label .label-green } Secure Messaging
+: **Lecture**{: .label .label-green } [Secure Messaging](assets/lectures/lec19.pdf)
     : [Joy of Cryptography](https://joyofcryptography.com/msg/)
 
 Nov 7
