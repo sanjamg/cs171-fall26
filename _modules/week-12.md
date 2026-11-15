@@ -18,3 +18,6 @@ Nov 11
 Nov 12
 : **Lecture**{: .label .label-green } [Zero-Knowledge Proofs](assets/lectures/lec21.pdf)
     : [Supplemental Materials](https://youtu.be/uchjTIlPzFo?si=eE1BXY8b_xPKX_Of)
+
+Nov 15
+: **Homework**{: .label .label-yellow } [Homework 8](assets/homework/hw8.pdf) ([LaTeX Template](assets/homework/hw8.tex))
