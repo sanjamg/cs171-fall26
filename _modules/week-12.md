@@ -5,9 +5,7 @@ title: Week 12
 Nov 10
 : **Lecture**{: .label .label-green } [Commitment Schemes and Zero-Knowledge Proofs](assets/lectures/lec20.pdf)
     : Special Topics
-{% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 11](assets/discussion/disc11.pdf)
-{% endcomment %}
+: **Discussion**{: .label .label-purple } [Discussion 9](assets/discussion/discussion-9-student.pdf) ([Solution](assets/discussion/discussion-9-sol.pdf))
 
 {% comment %}
 Nov 11
