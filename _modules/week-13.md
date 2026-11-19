@@ -14,5 +14,5 @@ Nov 18
 {% endcomment %}
 
 Nov 19
-: **Lecture**{: .label .label-green } Secure Multiparty Computation
+: **Lecture**{: .label .label-green } [Secure Multiparty Computation](assets/lectures/lec23.pdf)
     : Special Topics
