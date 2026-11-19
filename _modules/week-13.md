@@ -5,9 +5,7 @@ title: Week 13
 Nov 17
 : **Lecture**{: .label .label-green } [Threshold Secret Sharing and Threshold Signatures](assets/lectures/lec22.pdf)
     : Joy of Cryptography, [Ch. 3](https://joyofcryptography.com/ss/)
-{% comment %}
-: **Discussion**{: .label .label-purple } [Discussion 12](assets/discussion/disc12.pdf)
-{% endcomment %}
+: **Discussion**{: .label .label-purple } [Discussion 10](assets/discussion/discussion-10-student.pdf) ([Solution](assets/discussion/discussion-10-sol.pdf))
 
 {% comment %}
 Nov 18
